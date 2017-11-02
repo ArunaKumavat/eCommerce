@@ -1,0 +1,329 @@
+.tyre-search-widget {
+    padding: 0 rem-calc(15px);
+    .sidebar & {
+        display: none;
+    }
+    .tyre-search-title {
+        display: none;
+    }
+    .title {
+        color: $darkorange;
+        display: block;
+        font-size: rem-calc(20px);
+        font-weight: 600;
+        text-align: center;
+        line-height: rem-calc(24px);
+        margin: 0;
+        padding: rem-calc(16px) 0 rem-calc(12px);
+
+    }
+
+
+    .checkbox-list {
+        margin: rem-calc(4) 0;
+        padding: 0;
+        list-style: none;
+        li {
+            float: left;
+            width: 50%;
+            margin: rem-calc(2) 0;
+            label {
+                color: $blue;
+                font-size: rem-calc(14);
+            }
+        }
+        input {
+            &[type=checkbox] {
+                margin: 0 rem-calc(6) 0 rem-calc(8);
+            }
+        }
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+    }
+
+
+    .tyre-search-vehicles {
+        margin-bottom: rem-calc(8px);
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        .title {
+
+        }
+        label {
+            position: relative;
+            text-align: left;
+        }
+        select {
+            margin-top: rem-calc(4);
+            margin-bottom: rem-calc(16px);
+        }
+
+    }
+    .tyre-search-size {
+        margin-bottom: rem-calc(20);
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        .title {
+            span {
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+        select {
+            margin-top: rem-calc(4);
+            margin-bottom: rem-calc(16px);
+        }
+        label {
+            color: #343434;
+            float: left;
+            font-size: rem-calc(13px);
+            line-height: rem-calc(18px);
+            margin-right: 0%;
+            text-align: left;
+            width: 100%;
+            position: relative;
+            &:last-of-type {
+                margin-right: 0;
+            }
+            @media #{$small-up} {
+                font-size: rem-calc(14px);
+            }
+        }
+    }
+    .tooltip {
+        display: inline-block;
+
+        margin-left: rem-calc(6);
+        @media #{$large-up} {
+            text-align: left;
+        }
+        &:after {
+            content: "i";
+            display: block;
+            padding: rem-calc(4);
+            height: rem-calc(18);
+            width: rem-calc(18);
+            line-height: rem-calc(12);
+            border-radius: rem-calc(11);
+            background: #808285;
+            color: #fff;
+            font-size: rem-calc(14);
+            font-weight: 700;
+            font-family: serif;
+            font-style: italic;
+            text-align: center;
+        }
+        .tooltip-message {
+            display: none;
+            position: absolute;
+            padding: rem-calc(20);
+            width: 100%;
+            line-height: 1.3em;
+            background: #e7e7e7;
+            color: #808285;
+            font-size: rem-calc(14);
+            z-index: 100;
+            top: 100%;
+            left: 0;
+            margin-top: rem-calc(0);
+            margin-left: rem-calc(0);
+            &:before {
+                position: absolute;
+                top: rem-calc(-20);
+                left: rem-calc(9);
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border: rem-calc(10) inset;
+                border-color: transparent transparent #e7e7e7;
+                border-bottom-style: solid;
+            }
+        }
+    }
+    button {
+        min-width: 140px;
+
+    }
+    @media #{$xmedium-up} {
+        border-radius: rem-calc(2);
+        border: 2px solid $blue;
+        background-color: $blue;
+        margin: 3% 2%;
+        margin-left: 0;
+        overflow: hidden;
+        padding: 0;
+        float: right;
+        width: 38%;
+        .sidebar & {
+            width: 100%;
+            margin: 1% 0;
+        }
+        .flexbox.flexwrap & {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .tyre-search-title {
+            background-color: $blue;
+            color: #ffffff;
+            display: block;
+            text-align: center;
+            width: 100%;
+            font-weight: 600;
+            font-size: rem-calc(22);
+            line-height: rem-calc(26);
+            strong {
+                display: block;
+                padding: rem-calc(10) rem-calc(8) rem-calc(13);
+                width: 100%;
+            }
+        }
+        .tyre-search-vehicles,
+        .tyre-search-size {
+            float: left;
+            margin-bottom: 0;
+            width: 50%;
+            .flexbox.flexwrap & {
+                display: flex;
+                flex-direction: column;
+            }
+            .title {
+                background-color: $lightgrey;
+                border-bottom: 1px solid $lightgreyhover;
+                border-left: 1px solid $lightgreyhover;
+                color: #343434;
+                padding: rem-calc(13) 0 rem-calc(16);
+                transition: background 250ms ease-out;
+                .sidebar & {
+                    font-size: rem-calc(18);
+                    padding: rem-calc(10) 0 rem-calc(13);
+                }
+                span {
+                    &:first-child {
+                        display: none;
+                    }
+                    &:last-child {
+                        display: block;
+                        text-transform: lowercase;
+                        &:first-letter {
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                &:hover {
+                    cursor: pointer;
+                    background-color: #f1f1f1;
+                }
+            }
+            &.active {
+                .title {
+                    background-color: #ffffff;
+                    border-color: #ffffff;
+                    color: $orange;
+                }
+                form {
+                    display: block;
+                    width: 200%;
+                    transform: translateX(-50%);
+                }
+            }
+            form {
+                background-color: #ffffff;
+                width: 200%;
+                padding: rem-calc(16) rem-calc(8);
+                transition: all 350ms ease-out;
+                transform: translateX(50%);
+                .flexbox.flexwrap & {
+                    flex: 1 1 auto;
+                }
+            }
+        }
+        .tyre-search-vehicles {
+            .title {
+                border-left: 0;
+                border-right: 1px solid $lightgreyhover;
+            }
+            form {
+                transform: translateX(-100%);
+            }
+            &.active {
+                form {
+                    transform: translateX(0%);
+                }
+            }
+        }
+        .tyre-search-size {
+            label {
+                margin-right: 0;
+                width: 100%;
+            }
+        }
+    }
+    @media #{$large-up} {
+        margin: -3.5% 2% 3% 0;
+        position: relative;
+        width: 31.3333%;
+        z-index: 5;
+        .sidebar & {
+            width: 100%;
+            margin: 3% 0;
+        }
+    }
+}
+.tyre-search-vehicles-form {
+    position: relative;
+    &:after {
+        content: '';
+        background-color: rgba(0,0,0,0.2);
+        z-index: 45;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 250ms ease-out;
+    }
+    &:before {
+        content: '';
+        background-image: url('..//img/reload.svg');
+        background-size: cover;
+        position: absolute;
+        z-index: 46;
+        left: 50%;
+        top: 50%;
+        margin: -15px 0 0 -15px;
+        height: 30px;
+        width: 30px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 250ms ease-out;
+    }
+    &.loading {
+        position: relative;
+
+        &:after,
+        &:before {
+            display: block;
+            opacity: 1;
+            pointer-events: auto;
+        }
+        &:before {
+            z-index: 50;
+        }
+        &:after {
+            z-index: 49;
+        }
+
+    }
+}

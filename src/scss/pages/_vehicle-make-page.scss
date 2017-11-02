@@ -1,0 +1,112 @@
+.vehicle-make-page {
+    text-align: center;
+    h1 {
+        color: $orange;
+        font-size: rem-calc(20);
+        font-weight: 600;
+        line-height: rem-calc(26);
+        padding: rem-calc(5) rem-calc(10);
+        text-align: center;
+        @media #{$xmedium-up} {
+            color: $blue;
+            font-size: rem-calc(38);
+            line-height: rem-calc(44);
+            padding: 0 rem-calc(100) 0 rem-calc(15);
+            text-align: left;
+        }
+        @media #{$large-up} {
+            font-size: rem-calc(46);
+            line-height: rem-calc(54);
+        }
+    }
+    .logo-image {
+        background-color: #ffffff;
+        border: 1px solid $blue;
+        height: auto;
+        margin: 0 0 rem-calc(16) 0;
+        padding: 0 0 45% 0;
+        position: relative;
+        width: 100%;
+        > div {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            right: 5%;
+            bottom: 5%;
+        }
+    }
+    .intro-content {
+        text-align: left;
+        p {
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        h5 {
+            margin-top: 0;
+        }
+        @media #{$xmedium-up} {
+            padding-bottom: rem-calc(12);
+        }
+        @media #{$large-up} {
+            &:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            .logo-image {
+                float: left;
+                margin-bottom: 0;
+                padding: 0 0 22.5% 0;
+                width: 33.3333%;
+            }
+            .intro-text {
+                float: left;
+                padding-left: rem-calc(20);
+                width: 66.6666%;
+            }
+        }
+    }
+    .main-content {
+        text-align: left;
+        @media #{$medium-up} {
+            ul {
+                margin-bottom: rem-calc(24);
+                &:after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+                li {
+                    float: left;
+                    width: 50%;
+                    &:nth-child(2n + 1) {
+                        clear: both;
+                    }
+                }
+            }
+        }
+        @media #{$large-up} {
+            ul {
+                &:after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+                li {
+                    float: left;
+                    width: 33.3333%;
+                    &:nth-child(2n + 1) {
+                        clear: none;
+                    }
+                    &:nth-child(3n + 1) {
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+}

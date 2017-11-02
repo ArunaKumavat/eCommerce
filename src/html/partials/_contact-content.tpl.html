@@ -1,0 +1,60 @@
+<main class="content">
+    <div class="row">
+        <h1>Contact Form</h1>
+        <section class="main-content">
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu dui eros. Curabitur ullamcorper nulla quis lacus venenatis laoreet. Integer varius turpis nec posuere dapibus. Quisque pulvinar orci nec massa mollis, a finibus dui euismod. In sed accumsan ante, in eleifend quam. Ut sodales elit arcu, sit amet faucibus leo accumsan vitae. </p>
+            </article>
+            <form class="contact-form">
+                <h5>Your Details</h5>
+                <label><span>Enquiry type</span>
+                    <select name="enquiry-type">
+                        <option>General</option>
+                        <option>Words</option>
+                        <option>Things</option>
+                    </select>
+                    <div class="input-details">Please tell us what sort of enquiry you're making.</div>
+                </label>
+                <label class="required"><span>First Name</span>
+                    <input type="text" name="firstName" data-val="true" data-val-required="Your First Name is required." />
+                </label>
+                <label class="required"><span>Last Name</span>
+                    <input type="text" data-val="true" data-val-required="Your Last Name is required." name="lastName" />
+                </label>
+                <label class="required"><span>Email</span>
+                    <input type="email" data-val="true" data-val-required="Your Email is required." name="email" />
+                </label>
+                <label><span>Contact Phone<div class="tooltip"><div class="tooltip-message">We would prefer a mobile number. (04XX XXX XXX)</div></div></span>
+                    <input type="text" />
+                </label>
+
+                <h5>Your Query</h5>
+
+                <label><span>Preferred Contact Method</span>
+                    <select name="preferredContactMethod">
+                        <option>General</option>
+                        <option>Words</option>
+                        <option>Things</option>
+                    </select>
+                </label>
+
+                <label>
+                    <input type="checkbox" name="receiveOffers" /> <span>Yes I want to receive offers from Tyres and More</span>
+                </label>
+                <label class="required"><span>Comments</span>
+                    <textarea required name="comments"></textarea>
+                </label>
+
+                <button class="submit btn white">Send Query</button>
+            </form>
+        </section>
+
+        <aside class="sidebar">
+            @@include('./_tyre-search-widget.tpl.html')
+
+            @@include('./_newsletter-widget.tpl.html')
+
+            @@include('./_promo-widget.tpl.html')
+        </aside>
+    </div>
+</main>

@@ -1,0 +1,103 @@
+.content.tyre-details {
+    text-align: center;
+
+    .row {
+        @media #{$xmedium-up} {
+            position: relative;
+        }
+    }
+    .promo-widget {
+        > img {
+            margin: 2% 0;
+            width: 100%;
+        }
+    }
+    .tyre-promo-image {
+        display: block;
+        margin: 1% 0 2.5%;
+        width: 100%;
+        img {
+            display: block;
+            width: 100%;
+        }
+        @media #{$xmedium-up} {
+            display: block;
+        }
+    }
+    h1 {
+        color: $orange;
+        font-size: rem-calc(20);
+        font-weight: 600;
+        line-height: rem-calc(26);
+        padding: rem-calc(5) rem-calc(10);
+        text-align: center;
+        @media #{$xmedium-up} {
+            color: $blue;
+            font-size: rem-calc(38);
+            line-height: rem-calc(44);
+            padding: 0 rem-calc(210) 0 rem-calc(15);
+            text-align: left;
+        }
+        @media #{$large-up} {
+            font-size: rem-calc(46);
+            line-height: rem-calc(54);
+        }
+    }
+    .request-a-quote {
+        font-weight: 600;
+        margin: rem-calc(7) 0 rem-calc(21) 0;
+        background-image: url('..//img/arrow-right-white.svg');
+        background-size: rem-calc(10) rem-calc(19);
+        background-position: top rem-calc(9) right rem-calc(12);
+        background-repeat: no-repeat;
+        padding-right: rem-calc(32);
+        @media #{$xmedium-up} {
+            position: absolute;
+            top: rem-calc(12);
+            right: rem-calc(15);
+            margin: 0;
+        }
+    }
+    .sidebar {
+        display: none;
+        @media #{$xmedium-up} {
+            display: block;
+            margin: rem-calc(25) 2% 3% 0%
+        }
+    }
+    .tyre-highlight {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: auto;
+        @media #{$medium-up} {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        @media #{$xmedium-up} {
+            margin-right: 0;
+            margin-left: 0;
+            position: relative;
+        }
+        @media #{$large-up} {
+        }
+    }
+    .tyre-change {
+        @media #{$large-up} {
+            width: 50%;
+            float: left;
+        }
+    }
+    .tyre-item {
+        display: none;
+        @media #{$xmedium-up} {
+            display: block;
+        }
+    }
+    .main-content {
+        text-align: left;
+        @media #{$xmedium-up} {
+            margin-top: rem-calc(25);
+            padding-right: rem-calc(15)
+        }
+    }
+}

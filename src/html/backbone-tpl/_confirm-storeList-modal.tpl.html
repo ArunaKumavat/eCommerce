@@ -1,0 +1,62 @@
+<div class="page">
+    <div class="modal-title-container row">
+        <h1>Store List</h1>
+    </div>
+    <div class="find-store-section">
+        <h5>
+            Find a Tyres &amp; More store
+        </h5>
+
+        <div class="row">
+            <div class="columns medium-6" style="padding: 0">
+                <div class="columns small-6 medium-6" style="padding: 0">
+                    <input id="postcode-modal" name="Postcode" placeholder="Enter a suburb, postcode and or state" required="required" type="text" aria-required="true" aria-invalid="false" aria-describedby="postcode-error" class="valid">
+                </div>
+                <div class="columns find-tyre small-6 medium-6">
+                    <button name="submit" value="FindStore" class="btn search-Store orange">Find Tyre Store</button>
+                </div>
+            </div>
+        </div>
+
+        <a class="all-store" href="/stores/store-locator">
+            Show all stores
+        </a>
+
+    <% if (storeList) { %>
+    <% _.each( storeList, function(store) { %>
+    <% if (store.Store) { %>
+    <div class="my-store row">
+        <div class="columns xsmall-2 small-2 medium-1">
+            <div class="distance"><!-- DONT REMOVE THIS COMMENT
+                        --><!-- DONT REMOVE THIS COMMENT
+                        --><%= store.Distance %></div>
+        </div>
+        <div class="columns xsmall-10 small-6 medium-8">
+            <div class="store-name"><%= store.Store.StoreTitle %></div>
+            <div class="store-phone">
+                <strong>Phone</strong><br>
+                <a href="tel:<%= store.Store.Phone %>"><%= store.Store.Phone %></a>
+            </div>
+            <div class="store-address">
+                <strong>Address</strong>
+                <p class="address">
+                    <%= store.Store.AddressLine %>,
+                    <%= store.Store.City %>, <%= store.Store.State %>, <%= store.Store.ZipCode %>.
+                </p>
+            </div>
+        </div>
+        <div class="columns xsmall-12 small-4 medium-3">
+            <a class="select-me btn blue right" data-id="<%= store.Store.StoreId %>">
+                My store
+            </a>
+        </div>
+    </div>
+    <% } %>
+    <% }); %>
+    <% } %>
+</div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn cart-close">Close</button>
+</div>

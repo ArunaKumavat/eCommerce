@@ -1,0 +1,77 @@
+<div class="tyre-search-widget">
+    <div class="tyre-search-title">
+        <strong>Tyre Search</strong>
+    </div>
+    <div class="tyre-search-vehicles active">
+        <strong class="title"><span>Find Tyres </span><span>by Vehicle</span></strong>
+
+        <form action="" class="tyre-search-vehicles-form">
+            <label>
+                Vehicle Make
+                <select required name="vehicle-make" id="vehicle-make">
+                    <option disabled selected value="">Select make</option>
+                    <option value="7">Alfa Romeo</option>
+                    <option value="10">Bentley</option>
+                    <option value="23">Holden</option>
+                    <option value="54">Subaru</option>
+                    <option value="56">Toyota</option>
+                </select>
+            </label>
+            <label>
+                Vehicle Model
+                <select required name="vehicle-model" id="vehicle-model" disabled>
+                    <option disabled selected value="">Select model</option>
+                </select>
+            </label>
+            <label>
+                Vehicle Year
+                <select required name="vehicle-year" id="vehicle-year" disabled>
+                    <option disabled selected value="">Select year</option>
+                </select>
+            </label>
+            <label>
+                Vehicle Series
+                <select required name="vehicle-series" id="vehicle-series" disabled>
+                    <option disabled selected value="">Select series</option>
+                </select>
+            </label>
+
+            <button class="btn orange">Search for tyres</button>
+        </form>
+
+    </div>
+    <div class="tyre-search-size">
+        <strong class="title"><span>Find Tyres by Size</span><span>By tyre size</span></strong>
+        <form class="tyre-search-size-form">
+            <label>
+                Section Width<div class="tooltip"><div class="tooltip-message">This is the width of your tyre subsection.</div></div>
+                <select id="section-width">
+                    <option selected value="">Select</option>
+                    <option>205</option>
+                    <option>220</option>
+                    <option>240</option>
+                </select>
+            </label>
+            <label>
+                Aspect Ratio
+                <select id="aspect-ratio">
+                    <option selected value="">Select</option>
+                    <option>205</option>
+                    <option>220</option>
+                    <option>240</option>
+                </select>
+            </label>
+            <label>
+                Rim Diameter
+                <select id="rim-diameter">
+                    <option selected value="">Select</option>
+                    <option>205</option>
+                    <option>220</option>
+                    <option>240</option>
+                </select>
+            </label>
+
+            <button class="btn orange">Search for tyres</button>
+        </form>
+    </div>
+</div>

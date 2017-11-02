@@ -1,0 +1,50 @@
+.content.tyre-results {
+    text-align: center;
+
+    h1 {
+        color: $orange;
+        font-size: rem-calc(20);
+        font-weight: 600;
+        line-height: rem-calc(26);
+        padding: rem-calc(5) rem-calc(10);
+        text-align: center;
+        @media #{$xmedium-up} {
+            color: $blue;
+            font-size: rem-calc(38);
+            line-height: rem-calc(44);
+            padding: 0 rem-calc(210) 0 rem-calc(15);
+            text-align: left;
+        }
+        @media #{$large-up} {
+            font-size: rem-calc(46);
+            line-height: rem-calc(54);
+        }
+    }
+    .sidebar {
+        display: none;
+        @media #{$xmedium-up} {
+            display: block;
+            margin: rem-calc(25) 2% 3% 0%;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 120px;
+        }
+    }
+    .main-content {
+        padding: 0 rem-calc(12);
+        text-align: center;
+        @media #{$small-up} {
+            padding: 0 rem-calc(24);
+        }
+        @media #{$xmedium-up} {
+            margin-top: rem-calc(25);
+            padding: 0 rem-calc(15) 0 0;
+        }
+        
+    }
+    .show-all,
+    .load-more {
+        min-width: 144px;
+        margin: rem-calc(8) 0 rem-calc(22);
+    }
+}

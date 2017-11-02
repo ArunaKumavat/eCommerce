@@ -1,0 +1,44 @@
+.promo-widget {
+    display: block;
+    float: left;
+    margin: 1% 0;
+    width: 100%;
+    .image {
+        display: inline-block;
+        background-size: cover;
+        background-position: center;
+        height: 0;
+        padding-top: 29%;
+        min-height: rem-calc(110);
+        vertical-align: middle;
+        width: 35%;
+        + .info {
+            padding: rem-calc(10) rem-calc(5) rem-calc(10) rem-calc(15);
+            width: 65%;
+        }
+    }
+    .info {
+        display: inline-block;
+        padding: rem-calc(10);
+        vertical-align: middle;
+        width: 100%;
+        strong {
+            color: $lightblue;
+            display: block;
+            font-size: rem-calc(14);
+            line-height: rem-calc(20);
+            font-weight: 600;
+            padding: rem-calc(0) rem-calc(0) rem-calc(6);
+            text-transform: uppercase;
+        }
+        p {
+            color: $blue;
+            font-size: rem-calc(16);
+            line-height: rem-calc(20);
+            margin-bottom: rem-calc(16);
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

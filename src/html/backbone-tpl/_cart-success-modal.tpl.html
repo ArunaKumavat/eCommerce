@@ -1,0 +1,49 @@
+<div class="page">
+    <div class="modal-title-container">
+        <h1>Your booking is complete</h1>
+        <h5 class="order-secondary-title">Thank you for your order john.Your order number is @ReadOrderNumberFromQuerystring()</h5>
+
+        <p>A team member at <span class="blue"><%= Store.StoreName %></span> will be in contact with you within the next 48 hours to book in your fitting.</p>
+        <h4>Check your inbox!</h4>
+    </div>
+</div>
+<div class="modal-footer thankyou">
+    <div class="row">
+        <div class="xsmall-6 medium-3 columns">
+            <p class="storename">
+                <%= Store.StoreName %>
+            </p>
+            <a class="phone-number storename" href="tel:03 9725 1166">
+                <% if(Store.StoreDetails) { %>
+                <%= Store.StoreDetails.Phone %>
+                <% } %>
+            </a>
+        </div>
+        <div class="xsmall-6 medium-3 columns">
+            <p class="customer-service">
+            Customer Service
+            </p>
+            <a class="phone-number" href="tel:136673">
+                136673
+            </a>
+        </div>
+        <div class="medium-6 columns">
+            <button class="btn blue right">Close</button>
+        </div>
+    </div>
+
+</div>
+
+@functions
+{
+	static string ReadOrderNumberFromQuerystring()
+    {
+        string orderNumber = HttpContext.Current.Request.QueryString["OrderNumber"];
+		if (!string.IsNullOrEmpty(orderNumber))
+		{
+			return orderNumber;
+		}
+		
+		return "WEB000000";
+    }
+}

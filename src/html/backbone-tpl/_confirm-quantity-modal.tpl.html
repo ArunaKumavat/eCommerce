@@ -1,0 +1,45 @@
+
+<div class="page">
+    <div class="modal-title-container row">
+        <h1>Confirm Your Quantity</h1>
+    </div>
+    <div class="confirm-quantity-container">
+        <div class="modal-header-alert">
+            <p class="alert-title">Your fitting will be at <span><% if(Store) { %><%= Store.StoreName%>  <% } %>Tyres &amp; More</span>. To update, please <a href="/stores/store-locator">click here</a></p>
+            <p>All prices includes fitting, balancing, tubeless valve, waste tyre management fee and GST.</p>
+        </div>
+
+        <% if(ErrorMessage) { %>
+        <div class="error">
+            <%= ErrorMessage %>
+        </div>
+        <% } %>
+
+        <div class="cart-table quantity-table">
+            <div class="cart-table-head">
+                <div class="hide-mobile">Tyres</div>
+                <div></div>
+                <div class="hide-mobile"></div>
+                <div>Availability</div>
+                <div>Price</div>
+                <div>Quantity</div>
+                <div class="hide-mobile"></div>
+            </div>
+            <div class="table-body">
+
+            </div>
+        </div>
+
+        <div class="modal-text">
+            <p>
+               <% if(ItemDetails) { %>
+               <%= ItemDetails.ProductDescription %>
+                <% } %>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn cart-close">Close and Keep Shopping</button>
+    <button class="btn orange">View Cart & Checkout</button>
+</div>

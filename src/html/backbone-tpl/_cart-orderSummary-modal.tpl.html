@@ -1,0 +1,122 @@
+<div class="page">
+<div class="modal-title-container row">
+    <div class="medium-6 columns">
+        <h1>Shopping cart</h1>
+    </div>
+    <div class="pagination columns">
+        <div class="row">
+            <div class="cart-page xsmall-4 columns"><span>1.</span><span>Shopping cart</span></div>
+            <div class="cart-page xsmall-4 columns"><span>2.</span><span>Your Details</span></div>
+            <div class="cart-page xsmall-4 columns active"><span>3.</span><span>Order Summary</span></div>
+        </div>
+    </div>
+</div>
+<div class="confirm-quantity-container">
+    <div class="modal-header-alert">
+        <p>All prices includes fitting, balancing, tubeless valve, waste tyre management fee and GST.</p>
+    </div>
+
+    <div class="row">
+        <div class="medium-5 columns">
+            <h4>Personal Details</h4>
+            <table class="order-summaryTable">
+                <tr>
+                    <td class="title">Name</td>
+                    <td><%= Customer.FirstName %> <%= Customer.LastName %></td>
+                </tr>
+                <tr>
+                    <td class="title"> Email</td>
+                    <td><%= Customer.EmailAddress %></td>
+                </tr>
+                <tr>
+                    <td class="title">Phone</td>
+                    <td><%= Customer.Phone %></td>
+                </tr>
+                <tr>
+                    <td class="title">Billing Address</td>
+                    <td>
+                        <%= Customer.Address.StreetAddress1 %>, <%= Customer.Address.Suburb %>,
+                        <%= Customer.Address.State %> , <%= Customer.Address.PostCode %>.
+                    </td>
+                </tr>
+            </table>
+
+            <h4 class="order-primary-title">Preferred Store</h4>
+            <h5 class="order-secondary-title"><b><%= Store.StoreName %> Tyres & More</b></h5>
+            <table class="order-summaryTable address">
+                <thead>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </thead>
+                <tr>
+                    <td class="title-primary"><b><%if(Store.StoreDetails) { %><%= Store.StoreDetails.Phone %><% } %></b></td>
+                    <td><%if(Store.StoreDetails) { %><%= Store.StoreDetails.AddressLine %><% } %>,
+                        <%if(Store.StoreDetails) { %><%= Store.StoreDetails.City %><% } %></td>
+                </tr>
+            </table>
+        </div>
+        <div class="medium-7 columns">
+            <h4>Cart Summary</h4>
+            <table class="order-summaryTable cart-summary">
+                <tbody>
+                <% if(OrderItems) { %>
+                <% _(OrderItems).each(function(OrderItem) { %>
+                <tr>
+                    <td><div class="tyre-image"><img src="/img/tyre-front-quarter.png"></div></td>
+                    <td>
+                        <span class="tyre-name title-primary"><b><%= OrderItem.ProductName %></b> x <%= OrderItem.QuantityOrdered %></span>
+                        <span class="tyre-model-number"><%= OrderItem.ProductSku %></span>
+                    </td>
+                    <td class="hide-mobile"><span class="tyre-price title">$<%= OrderItem.DisplayItemRetailPrice %></span></td>
+                    <td>
+                        <span class="mobile-table-header">Total</span>
+                        <% if(OrderItem.DisplayTotalBillablePrice) { %>
+                        <span class="tyre-price title"><strike><b>$<%= OrderItem.DisplayTotalRetailPrice %></b></strike></span>
+                        <span class="tyre-price"><b>$<%= OrderItem.DisplayTotalBillablePrice %></b></span>
+                        <% } else { %>
+                        <span class="tyre-price"><b>$<%= OrderItem.DisplayTotalRetailPrice %></b></span>
+                        <% } %>
+                    </td>
+                </tr>
+                <% }) %>
+                <% } %>
+                <% if(ServiceItems) { %>
+                <% _(ServiceItems).each(function(ServiceItem) { %>
+                <tr>
+                    <td class="wheel-img hide-mobile">
+                        <img src="<%= ServiceItem.ServiceDetails.ImageUrl %>">
+                    </td>
+                    <td colspan="2">
+                        <span class="title-primary"><b><%= ServiceItem.ServiceDetails.Name %></b></span></br>
+                        <span><%= ServiceItem.ServiceDetails.Content %></span>
+                    </td>
+                    <td>
+                        <span class="tyre-price"><b>$<%= ServiceItem.ListedPriceIncGst %></b></span>
+                    </td>
+                </tr>
+                <% }) %>
+                <% } %>
+                </tbody>
+            </table>
+            <div class="total row">
+                <div class="columns right">
+                    <div class="row"><p class="right retail-price">Retail Price: <span>$ <%= DisplayTotalRetailValueIncludingGst %></span></p></div>
+                    <div class="row"><p class="right discount-price">Discount: <span>$ <%= DisplayTotalDiscountValueIncludingGst %></span></p></div>
+                    <div class="row"><p class="right total-price">Total: <span>$ <%= DisplayTotalBillableValueIncludingGst %></span></p></div>
+                    <div class="row"><p class="right">(Price Includes GST)</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal-footer">
+    <button class="btn cart-close">Close</button>
+    <% if (CustomerType === "Admin") {%>
+    <a href="<%= ADMIN_ORDER_URL %>" class="btn orange">Proceed to Admin Order</a>
+    <% } %>
+	<form method="post" action='<%= NAB_PAYMENT_URL %>'>
+        <img class="nab" src="/img/nab.jpg">
+	    <button type="submit" class="btn orange">Proceed to secure payment</button>
+	</form>	
+</div>

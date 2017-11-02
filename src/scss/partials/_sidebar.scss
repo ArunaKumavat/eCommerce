@@ -1,0 +1,22 @@
+.sidebar {
+    float: left;
+    background-color: $verylightblue;
+    padding: rem-calc(12) rem-calc(16) rem-calc(10);
+    width: 100%;
+    @media #{$xmedium-up} {
+        width: 38%;
+        margin: 3% 0% 3% 2%;
+    }
+    @media #{$large-up} {
+        width: 31.3333%;
+        margin: 3% 0% 3% 2%;
+    }
+    iframe {
+        display: none;
+        height: 260px;
+        width: 100%;
+        @media #{$xmedium-up} {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.call-to-action-bar {
+    background-color: $verylightblue;
+    border-top: 1px solid $grey;
+    padding: rem-calc(11) 0;
+    @media #{$xmedium-up} {
+        padding: rem-calc(18) 0;
+    }
+    @media #{$large-up} {
+        padding: rem-calc(18) 0 rem-calc(28);
+    }
+}

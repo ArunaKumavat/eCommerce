@@ -1,0 +1,157 @@
+.page-heading-wrap {
+    h1 {
+        padding: rem-calc(7) rem-calc(15) rem-calc(7);
+        font-size: rem-calc(30);
+        line-height: rem-calc(36);
+        color: $blue;
+        font-weight: 600;
+        margin: 0 auto;
+        text-align: left;
+        max-width: rem-calc(560);
+        @media #{$xmedium-up} {
+            font-size: rem-calc(48);
+            line-height: rem-calc(46);
+            max-width: none;
+        }
+    }
+    + .hero-banner-flexslider {
+        margin-top: rem-calc(3);
+        @media #{$xmedium-up} {
+            margin-top: rem-calc(8);
+        }
+    }
+    + .content {
+        padding-top: 0;
+        .page-subscribe-details & {
+            .main-content {
+                margin-top: 3%;
+            }
+        }
+    }
+}
+.content {
+    padding-top: rem-calc(6);
+    .row {
+        @media #{$xmedium-up} {
+            position: relative;
+        }
+    }
+    h1 {
+        padding: 0 rem-calc(15);
+        font-size: rem-calc(30);
+        line-height: rem-calc(40);
+        color: $blue;
+        font-weight: 600;
+        margin: 0 auto;
+        max-width: rem-calc(560);
+        @media #{$xmedium-up} {
+            font-size: rem-calc(48);
+            line-height: rem-calc(46);
+            max-width: none;
+        }
+    }
+    .request-a-quote {
+        font-weight: 600;
+        margin: rem-calc(7) 0 rem-calc(21) 0;
+        background-image: url('..//img/arrow-right-white.svg');
+        background-size: rem-calc(10) rem-calc(19);
+        background-position: top rem-calc(9) right rem-calc(12);
+        background-repeat: no-repeat;
+        padding-right: rem-calc(32);
+        @media #{$xmedium-up} {
+            position: absolute;
+            top: rem-calc(4);
+            right: rem-calc(15);
+            margin: 0;
+        }
+        @media #{$large-up} {
+            top: rem-calc(12);
+        }
+    }
+    .main-content {
+        max-width: rem-calc(560);
+        margin: 0 auto;
+        @media #{$xmedium-up} {
+            float: left;
+            width: 60%;
+        }
+        @media #{$large-up} {
+            width: 66.6666%;
+            max-width: none;
+        }
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .video-container {
+            height: 0;
+            margin: rem-calc(20) 0;
+            padding-top: 56.25%;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            iframe {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                margin: 0;
+                border: 0;
+                display: block;
+                min-height: 0;
+                top: 0;
+                left: 0;
+            }
+        }
+        > .video-container {
+            margin-top: 4.7%;
+            margin-bottom: 0;
+        }
+
+        .page-subscribe-details & {
+            form {
+                label {
+                    > span:first-child {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        form {
+            padding-top: rem-calc(28);
+        }
+        article + form {
+          padding-top: 0;
+        }
+    }
+    article, .intro-content {
+        color: #343434;
+        padding: rem-calc(10) rem-calc(15) rem-calc(15);
+
+        h1 {
+            line-height: 1.25;
+            margin-bottom: 2rem;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        p {
+            font-size: rem-calc(14);
+            line-height: rem-calc(16);
+            @media #{$xmedium-up} {
+                font-size: rem-calc(15);
+                line-height: rem-calc(20);
+            }
+            @media #{$large-up} {
+                font-size: rem-calc(16);
+                line-height: rem-calc(22);
+            }
+        }
+
+        @media #{$xmedium-up} {
+            font-size: rem-calc(16);
+            line-height: rem-calc(22);
+            padding: rem-calc(24) rem-calc(18) rem-calc(24) rem-calc(18);
+        }
+
+    }
+}

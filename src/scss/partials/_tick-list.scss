@@ -1,0 +1,19 @@
+// specificity hack
+.tick-list.tick-list.tick-list {
+    li {
+        padding: rem-calc(5) rem-calc(8) rem-calc(5) rem-calc(27);
+        position: relative;
+        &:after {
+            background-image: url('..//img/tick.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: rem-calc(15) rem-calc(15);
+            content: '';
+            height: rem-calc(17);
+            width: rem-calc(17);
+            position: absolute;
+            top: rem-calc(4);
+            left: 0;
+        }
+    }
+}

@@ -1,0 +1,113 @@
+        <footer class="page-footer">
+          <div class="row">
+            <div class="footer-copyright">
+                <a href="#">Privacy Statement</a>
+                 &nbsp; | &nbsp;
+                <a href="#">Disclaimer</a> &nbsp;
+                <span>&copy; Tyres &amp; More. All rights reserved.</span>
+            </div>
+            <div class="footer-social">
+                <a href="#">
+                    <img src="/img/facebook.svg" />
+                </a>
+                <a href="#">
+                    <img src="/img/youtube.svg" />
+                </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </form>
+        <div id="modal">
+        </div>
+        <a class="loader"></a>
+
+        @@include('./../backbone-tpl/BackboneTemplates.tpl.html')
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script>window.jQuery || document.write('<script src="/js/lib/jquery.min.js"><\/script>')</script>
+    <script src="/js/lib.min.js"></script>
+    <script src="/js/backbone-app.js"></script>
+    <script src="/js/global.js"></script>
+
+
+    <form class="request-a-quote-form modal">
+        <strong class="title">Request a Quote</strong>
+        <div class="form-section">
+            <div class="form-section-title">My Store<div class="tooltip"><div class="tooltip-message">This is the width of your tyre subsection.</div></div></div>
+            <select>
+                <option>Store 1</option>
+                <option>Store Long Name</option>
+                <option>Store 1</option>
+                <option>Store Long Name</option>
+            </select>
+        </div>
+        <div class="form-section">
+            <div class="form-section-title">Vehicle Details</div>
+            <input type="text" name="VehicleDetails" value="make:139 model:1718 year:2012 series:49729" />
+        </div>
+        <div class="form-section">
+            <div class="form-section-title">Tyre Details</div>
+            <input type="text" name="TyreDetails" />
+        </div>
+        <div class="form-section">
+            <div class="form-section-title">Your Details</div>
+            <label>
+                <span>First Name<div class="tooltip"><div class="tooltip-message">This is the width of your tyre subsection.</div></div></span>
+                <input type="text" name="firstName" data-val="true" data-val-required="Your First Name is required." />
+            </label>
+            <label>
+                <span>Last Name</span>
+                <input type="text" />
+            </label>
+            <label>
+                <span>Email</span>
+                <input type="email" />
+            </label>
+            <label>
+                <span>Contact Phone</span>
+                <input type="text" />
+            </label>
+        </div>
+        <div class="form-section">
+            <div class="form-section-title">Purchase Details</div>
+            <label>
+                <span>Number of Tyres</span>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </label>
+            <label>
+                <span>Planned Purchase Date</span>
+                <input type="date" />
+            </label>
+            <label>
+                <span>Fitting Required</span>
+                <select>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </label>
+            <label>
+                <span>Include Wheel Balance &amp; Alignment</span>
+                <select>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </label>
+        </div>
+        <div class="form-section">
+            <div class="form-section-title">Message Details</div>
+            <label>
+                <span>Additional Information</span>
+                <textarea></textarea>
+            </label>
+        </div>
+        <button class="btn white">Send Query</button>
+    </form>
+  </body>
+</html>

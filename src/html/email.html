@@ -1,0 +1,213 @@
+<!Doctype html>
+<head>
+    <style>
+        body{
+            max-width: 650px;
+            margin: 50px auto;
+            font-family: "Open Sans",Helvetica,Arial,sans-serif;
+        }
+
+        .row{
+            display: inline-block;
+            width: 100%;
+        }
+
+        .invoice {
+            border: 1px dotted grey;
+            padding: 10px;
+            margin: 10px 0;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .left{
+            float: left;
+        }
+
+        .details{
+            font-size: 12px;
+            width: 50%;
+        }
+
+        .cart-table {
+            display: table;
+            width: 100%;
+            margin: 1.25rem 0;
+        }
+
+        .cart-table .tyre-name {
+            color: #0071b9;
+            font-size: 1.125rem;
+            font-weight: bold;
+        }
+
+        .cart-table .tyre-model-number {
+            font-size: 0.75rem;
+        }
+
+        .cart-table .tyre-price {
+            font-size: 1.25rem;
+            margin-bottom: 0;
+            font-weight: bold;
+            color: #24a0ee;
+        }
+
+        .cart-table .tyre-price-billable {
+            color: #0071b9;
+            font-size: 1.125rem;
+            font-weight: bold;
+        }
+
+        .cart-table-head {
+            border-bottom: 1px solid #0071b9;
+        }
+
+        .cart-table-head div {
+            display: inline-block;
+            color: #41b2f9;
+            font-weight: bold;
+            width: 24%;
+            text-align: center;
+        }
+
+        .table-body {
+            border-bottom: 1px solid #0071b9;
+        }
+
+        .table-body .cart-table-cell {
+            display: inline-block;
+            width: 24%;
+            line-height: 1.2;
+            vertical-align: middle;
+            text-align: center;
+            margin: 0.625rem 0;
+        }
+
+        .retail-price {
+            color: black;
+            font-size: 1.125rem;
+            margin-bottom: 0;
+        }
+
+        .retail-price span {
+            font-weight: bold;
+        }
+
+        .discount-price {
+            color: #41b2f9;
+            font-size: 1.125rem;
+            margin-bottom: 0;
+        }
+
+        .discount-price span {
+            font-weight: bold;
+        }
+
+        .total-price {
+            color: #0071b9;
+            font-size: 1.125rem;
+            margin-bottom: 0;
+        }
+
+        .headingOne {
+            color: #0071b9;
+        }
+
+        .headingTwo {
+            color: #41b2f9;
+        }
+
+        .total-price span {
+            font-weight: bold;
+        }
+
+        .total {
+            padding: 0.625rem 0;
+        }
+
+        .copyright {
+            color: #898989;
+            display: inline-block;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+Dear Sam, <br><br>Thank you for shopping at Tyres &amp; More! This email is to confirm that we have successfully received
+your order. We have included a copy of your invoice below. Please take the time to double check your order for
+correctness, with particular attention to your delivery address. <br>
+<div class="invoice">
+    <h2 class="headingOne">Tax Invoice</h2>
+    <div class="row">
+        <div class="row details left">
+            <h3 class="headingTwo">Personal Details</h3>
+            <p><strong class="headingTwo">First name:</strong> Sam</p>
+            <p><strong class="headingTwo">Last name:</strong> Chan</p>
+            <p><strong class="headingTwo">Email address:</strong> schan@nowdigital.com.au</p>
+        </div>
+        <div class="row details left">
+            <h3 class="headingTwo">Payment Received</h3>
+            <p><strong class="headingTwo">Order number:</strong> WEB0001012</p>
+            <p><strong class="headingTwo">Date:</strong> 25/08/2016 14:18 PM</p>
+            <p><strong class="headingTwo">Reference:</strong> 30774</p>
+        </div>
+    </div>
+
+    <h3 class="headingOne">Ordered Item/s</h3>
+    <div class="confirm-quantity-container">
+        <div class="cart-table">
+            <div class="cart-table-head">
+                <div>Tyres</div>
+                <div>Price</div>
+                <div>Quantity</div>
+                <div>Total</div>
+            </div>
+            <div class="table-body">
+                <div class="table-row">
+                    <div class="cart-table-cell"><span class="tyre-name">235/50R18</span><br><span
+                            class="tyre-model-number">2355018V551</span><br></div>
+                    <div class="cart-table-cell"><span class="tyre-price">$ 409.20</span></div>
+                    <div class="cart-table-cell"><span>3</span><br></div>
+                    <div class="cart-table-cell"><p class="tyre-price-billable">$ 660.00</p></div>
+                </div>
+                <div class="table-row">
+                    <div class="cart-table-cell"><span class="tyre-name">235/50R18</span><br><span
+                            class="tyre-model-number">2355018V551</span><br></div>
+                    <div class="cart-table-cell"><span class="tyre-price">$ 409.20</span></div>
+                    <div class="cart-table-cell"><span>3</span><br></div>
+                    <div class="cart-table-cell"><p class="tyre-price-billable">$ 660.00</p></div>
+                </div>
+                <div class="total row">
+                    <div class="cart-table-cell">Wheel Alignment:</div>
+                    <div class="cart-table-cell"></div>
+                    <div class="cart-table-cell"></div>
+                    <div class="cart-table-cell"><span class="tyre-price-billable">$ 165.00</span></div>
+                </div>
+            </div>
+            <div class="total row">
+                <div class="row"><p class="right retail-price">Retail Price: <span>$ 825.00</span></p></div>
+                <div class="row"><p class="right discount-price">Discount: <span>$ 0.00</span></p></div>
+                <div class="row"><p class="right total-price">Total: <span>$ 825.00</span></p></div>
+                <div class="row"><p class="right">(Price Includes GST)</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row details left">
+        <h3 class="headingTwo">Billing Address</h3>
+        <p>000 123 lane, 444666<br>melbourne, Vic 3000</p>
+    </div>
+    <div class="row details left">
+        <h3 class="headingTwo">Shiping Address</h3>
+        <p>Caroline Springs Tyres &amp; More<br>Cnr Ballarat Rd &amp; Delma Rd <br>Caroline Springs, VIC 3023</p>
+    </div>
+</div>
+
+<br>Thankyou,<br>Tyres &amp; More<br>
+
+<span class="copyright"> © Tyres &amp; More. All rights reserved.</span>
+</body>

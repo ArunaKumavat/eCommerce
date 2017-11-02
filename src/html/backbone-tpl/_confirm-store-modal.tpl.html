@@ -1,0 +1,42 @@
+
+<div class="page">
+  <div class="modal-title-container">
+    <h1>Confirm your store</h1>
+  </div>
+  <% if(Store) { %>
+  <div class="preferred-stored-container">
+    <div class="selected-store-container row">
+      <div class="full-height-container-dummy columns xsmall-2 medium-1 large-1">
+      </div>
+      <div class="full-height-container columns xsmall-2 medium-1 large-1">
+        <input type="radio" id="r1" name="location" checked="checked">
+        <label for="r1"></label>
+      </div>
+      <div class="store-information columns xsmall-10 medium-5 large-5">
+        <p>Yes, this is my store.</p>
+        <h2><% if(Store.StoreName) { %><%= Store.StoreName %> <% } %>Tyres &amp; More</h2>
+        <div class="store-information-details phone-information">
+          <h3>Phone</h3>
+          <p><% if(Store.StoreDetails) { %><%= Store.StoreDetails.Phone %><% } %></p>
+        </div>
+        <div class="store-information-details address-information">
+          <h3>Address</h3>
+          <p><% if(Store.StoreDetails) { %><%= Store.StoreDetails.AddressLine %><% } %></p>
+          <p><% if(Store.StoreDetails) { %><%= Store.StoreDetails.State %><% } %></p>
+        </div>
+      </div>
+      <div class="map-container columns medium-6 large-6">
+        <img src="/img/placeholder-map.png" />
+      </div>
+    </div>
+    <% } %>
+    <div class="change-store-container">
+      <label> <% if(Store) { %>Not my preferred store.<% } else { %> Select your preferred store. <% } %><a class="change-location"> Change</a> tyre store.</label>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <% if(Store) { %>
+  <button class="btn orange">View Cart</button>
+  <% } %>
+</div>

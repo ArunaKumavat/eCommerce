@@ -1,0 +1,44 @@
+
+<div class="cart-table-cell full-width">
+    <span class="tyre-name"><%= ProductName%></span></br>
+    <span class="tyre-model-number"><%= ProductSku %></span></br>
+    <img class="tyre-logo" src="/img/yokohama.svg" />
+</div>
+<div class="cart-table-cell wheel-image"><div class="tyre-image"><img src="/img/tyre-front-quarter.png"></div></div>
+<% if(Promotions) { %>
+<div class="cart-table-cell hide-mobile">
+    <% _.each(Promotions, function(promo) { %>
+    <span class="deal-name"><%= promo.PromoTitle %></span>
+    <% }); %>
+</div>
+<% } %>
+<div class="cart-table-cell hide-mobile">
+    <span class="mobile-table-header">Availability</span>
+    <span class="in-stock <% if(StockAlert === 'Out of stock') { %> red <% }%>"><%= StockAlert %></span>
+</div>
+<div class="cart-table-cell"><span class="mobile-table-header">Price</span><span class="tyre-price">$ <%= DisplayItemRetailPrice %></span></div>
+<div class="quantity cart-table-cell">
+    <span class="mobile-table-header">Quantity</span>
+    <p class="quantity-input">
+        <span class="quantity-input-decrease">-</span>
+        <span class="quantity-input-value"><%= QuantityOrdered %></span>
+        <span class="quantity-input-increase">+</span></p>
+    <p class="quantity-update">Update</p>
+</div>
+<div class="cart-table-cell table-delete">
+    <a class="delete"><img src="/img/delete.png"></a>
+</div>
+<div class="cart-table-cell">
+    <span class="mobile-table-header">Total</span>
+    <% if(DisplayTotalBillablePrice) { %>
+    <p class="tyre-price"><strike>$<%= DisplayTotalRetailPrice %></strike></p>
+    <p class="tyre-price-billable">
+        $<%= DisplayTotalBillablePrice %>
+    </p>
+    <% } else { %>
+    <p class="tyre-price-billable">$<%= DisplayTotalRetailPrice %></p>
+    <% } %>
+</div>
+<div class="cart-table-cell full-width hide-for-medium-up">
+    <span class="in-stock <% if(StockAlert === 'Out of stock') { %> red <% }%>"><%= StockAlert %></span>
+</div>

@@ -1,0 +1,326 @@
+.find-tyres-menu-bar {
+    background-color: #ffffff;
+    display: none;
+    @media #{$xmedium-up} {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+    .find-by-vehicle-section {
+        margin: rem-calc(8) 0 rem-calc(24);
+        @media #{$xmedium-up} {
+            float: left;
+            min-height: rem-calc(370);
+            position: relative;
+            width: 66.66666%;
+        }
+        .logo-matrix {
+            display: none;
+            a {
+                padding-top: 14%;
+                &.active {
+                    box-shadow: inset 0 0 0 1px $orange, inset 2px 0 0 0px $orange, inset -2px 0 0 0px $orange;
+                    border-color: $orange;
+                }
+                &:nth-child(n+17) {
+                  display: none;
+                }
+            }
+            + a {
+                display: none;
+            }
+            @media #{$xmedium-up} {
+                display: block;
+                + a {
+                    display: block;
+                    line-height: rem-calc(32);
+                    padding-left: rem-calc(8);
+                }
+            }
+        }
+        form {
+            max-width: 340px;
+            margin: 0 auto;
+            .close-expansion {
+                display: none;
+            }
+            .tooltip {
+                display: inline-block;
+
+                margin-left: rem-calc(6);
+                @media #{$large-up} {
+                    text-align: left;
+                }
+                &:after {
+                    content: "i";
+                    display: block;
+                    padding: rem-calc(4);
+                    height: rem-calc(18);
+                    width: rem-calc(18);
+                    line-height: rem-calc(12);
+                    border-radius: rem-calc(11);
+                    background: #808285;
+                    color: #fff;
+                    font-size: rem-calc(14);
+                    font-weight: 700;
+                    font-family: serif;
+                    font-style: italic;
+                    text-align: center;
+                }
+                .tooltip-message {
+                    display: none;
+                    position: absolute;
+                    padding: rem-calc(20);
+                    width: 100%;
+                    line-height: 1.3em;
+                    background: #e7e7e7;
+                    color: #808285;
+                    font-size: rem-calc(14);
+                    z-index: 100;
+                    top: 100%;
+                    left: 0;
+                    margin-top: rem-calc(0);
+                    margin-left: rem-calc(0);
+                    &:before {
+                        position: absolute;
+                        top: rem-calc(-20);
+                        left: rem-calc(9);
+                        content: "";
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border: rem-calc(10) inset;
+                        border-color: transparent transparent #e7e7e7;
+                        border-bottom-style: solid;
+                    }
+                }
+            }
+            @media #{$xmedium-up} {
+                background-color: #ffffff;
+                position: absolute;
+                top: rem-calc(40);
+                bottom: 0;
+                right: 0;
+                width: 299px;
+                border-right: 3px solid $orange;
+                padding: rem-calc(8) rem-calc(16) rem-calc(8) rem-calc(80);
+                width: 0;
+                padding-left: 0;
+                padding-right: 0;
+                border-right: 0;
+                overflow: hidden;
+                box-shadow: 0px 0 0px #ffffff;
+                transition: all 350ms ease-out;
+                label {
+                    width: 200px;
+                }
+                button {
+                    width: 162px;
+                }
+                &.active {
+                    width: 299px;
+                    border-right: 3px solid $orange;
+                    padding-right: rem-calc(16);
+                    padding-left: rem-calc(80);
+                    box-shadow: -80px 0 80px #ffffff;
+                }
+                .close-expansion {
+                    background-image: url('..//img/arrow-right-white.svg');
+                    background-size: 11px 21px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    background-color: $orange;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    margin-left: rem-calc(14);
+                    margin-top: rem-calc(-20);
+                    transition: all 250ms ease-out;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+        }
+    }
+    .find-by-size-section {
+        margin: rem-calc(8) 0 rem-calc(24);
+        @media #{$xmedium-up} {
+            float: left;
+            width: 33.33333%;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            &:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            .tooltip {
+                display: inline-block;
+
+                margin-left: rem-calc(6);
+                @media #{$large-up} {
+                    text-align: left;
+                }
+                &:after {
+                    content: "i";
+                    display: block;
+                    padding: rem-calc(4);
+                    height: rem-calc(18);
+                    width: rem-calc(18);
+                    line-height: rem-calc(12);
+                    border-radius: rem-calc(11);
+                    background: #808285;
+                    color: #fff;
+                    font-size: rem-calc(14);
+                    font-weight: 700;
+                    font-family: serif;
+                    font-style: italic;
+                    text-align: center;
+                }
+                .tooltip-message {
+                    display: none;
+                    position: absolute;
+                    padding: rem-calc(20);
+                    width: 100%;
+                    line-height: 1.3em;
+                    background: #e7e7e7;
+                    color: #808285;
+                    font-size: rem-calc(14);
+                    z-index: 100;
+                    top: 100%;
+                    left: 0;
+                    margin-top: rem-calc(0);
+                    margin-left: rem-calc(0);
+                    &:before {
+                        position: absolute;
+                        top: rem-calc(-20);
+                        left: rem-calc(9);
+                        content: "";
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border: rem-calc(10) inset;
+                        border-color: transparent transparent #e7e7e7;
+                        border-bottom-style: solid;
+                    }
+                }
+            }
+            label {
+                float: left;
+                margin-right: 0%;
+                width: 100%;
+                position: relative;
+                select {
+                    margin-top: rem-calc(4);
+                }
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                @media #{$xmedium-up} {
+                    margin-right: 0;
+                    width: 100%;
+                }
+                @media #{$large-up} {
+                    margin-right: 0%;
+                    width: 100%;
+                }
+            }
+            @media #{$xmedium-up} {
+                padding: rem-calc(8) rem-calc(16);
+            }
+        }
+        h5 {
+            @media #{$xmedium-up} {
+                padding: rem-calc(0) rem-calc(16);
+            }
+        }
+    }
+    h5 {
+        color: $orange;
+        font-size: rem-calc(20);
+        line-height: rem-calc(28);
+        font-weight: 600;
+        margin: 0 0 rem-calc(4);
+        padding: 0 rem-calc(9);
+        text-align: center;
+        @media #{$xmedium-up} {
+            text-align: left;
+            margin-bottom: rem-calc(12);
+        }
+    }
+
+    form {
+        padding: 0 rem-calc(9);
+        text-align: center;
+        input {
+            background-color: $verylightblue;
+            color: #343434;
+            float: left;
+            font-size: rem-calc(14);
+            line-height: rem-calc(22);
+            margin: 0;
+            width: 49.5%;
+            padding: rem-calc(9) rem-calc(8) rem-calc(9);
+            height: auto;
+            &:hover, &:active, &:focus {
+                background-color: $verylightblue;
+            }
+            @media #{$xmedium-up} {
+                width: 46.5%;
+            }
+        }
+        select {
+            margin-top: rem-calc(4);
+        }
+        input, select {
+            margin-bottom: rem-calc(10);
+        }
+        label {
+            text-align: left;
+            position: relative;
+        }
+        button {
+            font-size: rem-calc(18);
+            padding: rem-calc(8) rem-calc(14) rem-calc(9);
+            &:hover {
+                padding: rem-calc(8) rem-calc(14) rem-calc(9);
+            }
+            @media #{$medium-up} {
+                font-size: rem-calc(20);
+            }
+            @media #{$xmedium-up} {
+                font-size: rem-calc(18);
+            }
+        }
+    }
+
+    .close-dropdown {
+        padding: rem-calc(3px) 0 rem-calc(12);
+        text-align: center;
+        svg {
+            fill:none;
+            stroke:#0071B9;
+            stroke-width:2;
+            stroke-linecap:round;
+            stroke-linejoin:round;
+            display: block;
+            margin: 0 auto;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        @media #{$xmedium-up} {
+            float: left;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,147 @@
+.sub-pages-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    @media #{$xmedium-up} {
+        padding-left: rem-calc(15);
+        padding-right: rem-calc(15);
+    }
+    .item-content {
+        display: none;
+        padding: rem-calc(16) rem-calc(40) rem-calc(20);
+        p {
+            font-size: rem-calc(14);
+            line-height: rem-calc(16);
+            margin-bottom: rem-calc(16);
+            &:last-of-type {
+                margin-bottom: rem-calc(4);
+            }
+        }
+        img {
+            margin-bottom: rem-calc(14);
+            width: 100%;
+        }
+        .item-link {
+            background-color: $orange;
+            background-image: url('..//img/arrow-right-white.svg');
+            background-repeat: no-repeat;
+            background-position: rem-calc(8) rem-calc(4);
+            background-size: rem-calc(6) rem-calc(12);
+            display: block;
+            float: right;
+
+            height: rem-calc(20);
+            transition: all 250ms ease-out;
+            width: rem-calc(20);
+            &:hover {
+                -webkit-transform: scale(1.15) rotate(-7.5deg);
+                transform: scale(1.15) rotate(-7.5deg);
+            }
+        }
+        &:before, &:after {
+            content: " ";
+            display: table;
+        }
+        &:after {
+            clear: both;
+        }
+        @media #{$large-up} {
+            display: block !important;
+            padding: rem-calc(8) rem-calc(0);
+            p {
+                font-size: rem-calc(16);
+                line-height: rem-calc(22);
+            }
+            .item-link {
+                background-position: rem-calc(12) rem-calc(7);
+                background-size: rem-calc(8) rem-calc(15);
+                height: rem-calc(29);
+                margin-bottom: rem-calc(16);
+                width: rem-calc(31);
+            }
+        }
+    }
+    li {
+        border-bottom: 1px solid $grey;
+        &:first-child {
+            border-top: 1px solid $grey;
+        }
+        &.active {
+            h5 {
+                color: $orange;
+                a {
+                    color: $orange;
+                    &:before {
+                        background-color: $orange;
+                        transform: rotate(90deg);
+
+                    }
+                }
+            }
+            @media #{$large-up} {
+                h5 {
+                    color: $blue;
+                    a {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+        @media #{$large-up} {
+            border: 0;
+            width: 45%;
+            float: left;
+            margin-right: 6%;
+            &:first-child {
+                border: 0;
+            }
+            &:nth-child(2n) {
+                margin-right: 4%;
+            }
+        }
+    }
+    h5 {
+        color: $lightblue;
+        margin: 0;
+        transition: all 250ms ease-out;
+        a {
+            color: $lightblue;
+            font-size: rem-calc(14);
+            font-weight: 700;
+            display: block;
+            padding: rem-calc(9) rem-calc(16) rem-calc(9) rem-calc(36);
+            position: relative;
+            transition: all 250ms ease-out;
+            &:before {
+                content: '';
+                background-color: $lightblue;
+                background-image: url('..//img/arrow-right-white.svg');
+                background-position: rem-calc(8) rem-calc(4);
+                background-repeat: no-repeat;
+                background-size: rem-calc(6) rem-calc(12);
+                border-radius: rem-calc(10);
+                height: rem-calc(20);
+                width: rem-calc(20);
+                position: absolute;
+                top: rem-calc(8);
+                left: rem-calc(8);
+                transition: all 250ms ease-out;
+            }
+        }
+        @media #{$large-up} {
+            a {
+                color: $blue;
+                font-size: rem-calc(22);
+                padding: rem-calc(9px) rem-calc(0) rem-calc(13);
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}

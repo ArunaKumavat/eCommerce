@@ -1,0 +1,69 @@
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  text-transform: uppercase;
+}
+
+blockquote {
+  margin: rem-calc($rem-base) 0 rem-calc($rem-base) 10%;
+  padding-top: 0;
+  
+  p, 
+  cite {
+    color: $primary-color;
+  }
+  
+  p:first-child {
+    margin-top: rem-calc($rem-base);
+  }
+}
+
+// definition lists.
+dl {
+  font-size: rem-calc(14);
+  
+  &.dl-horizontal {
+    dt {
+      float: left;
+      width: rem-calc(160);
+      overflow: hidden;
+      clear: left;
+      text-align: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    
+    dd {
+      margin-left: rem-calc(180);
+    }
+  }
+}
+
+dd {
+  padding-left: rem-calc(10);
+}
+
+// microformats.
+address {
+  margin-bottom: rem-calc(20);
+  font-style: normal;
+  font-size: rem-calc(15);
+}
+
+fieldset {
+  padding-left: 0;
+  padding-right: 0;
+  
+  legend {
+    background-color: transparent;
+  }
+}
+
+select,
+.chosen-container .chosen-single span,
+.chosen-container .chosen-results li {
+  font-size: rem-calc(14);
+}

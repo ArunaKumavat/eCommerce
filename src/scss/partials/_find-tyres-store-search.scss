@@ -1,0 +1,166 @@
+.find-store-menu-bar {
+    background-color: #ffffff;
+    display: none;
+    @media #{$xmedium-up} {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+    .find-store-section {
+        a {
+            display: inline-block;
+            padding: rem-calc(3) rem-calc(15) rem-calc(2) rem-calc(9);
+            font-weight: 600;
+            color: $blue;
+            font-size: rem-calc(16);
+        }
+        @media #{$xmedium-up} {
+            float: left;
+            width: rem-calc(330);
+            a {
+                padding-left: rem-calc(9);
+            }
+        }
+    }
+    .my-store-section {
+        display: none;
+        @media #{$xmedium-up} {
+            display: block;
+            float: right;
+            margin-bottom: rem-calc(20);
+            padding-left: rem-calc(24);
+            width: 50%;
+            .no-store-selected & {
+                display: none;
+            }
+            h5 {
+                padding-left: rem-calc(12);
+            }
+            .my-store {
+                border: 1px solid $grey;
+                padding: rem-calc(9) rem-calc(12);
+                &:after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+                .store-name {
+                    color: $lightblue;
+                    font-size: rem-calc(20);
+                    font-weight: 600;
+                }
+                strong {
+                    color: $lightblue;
+                    display: block;
+                    font-weight: 600;
+                }
+                .store-phone {
+                    float: left;
+                    width: 50%;
+                    @media #{$large-up} {
+                        width: 45%;
+                    }
+                    a {
+                        color: $blue;
+                        font-size: rem-calc(20);
+                        font-weight: bold;
+                        @media #{$large-up} {
+                            font-size: rem-calc(24);
+                        }
+                    }
+                }
+                .store-address {
+                    float: left;
+                    width: 50%;
+                    @media #{$large-up} {
+                        width: 55%;
+                    }
+                }
+                p {
+                    font-size: rem-calc(14);
+                    line-height: rem-calc(20);
+                    margin-bottom: 0;
+                    color: $blue;
+                    @media #{$large-up} {
+                        font-size: rem-calc(16);
+                        line-height: rem-calc(22);
+                    }
+                }
+            }
+        }
+    }
+    h5 {
+        color: $orange;
+        font-size: rem-calc(20);
+        font-weight: 600;
+        margin: rem-calc(8) 0;
+        padding: 0 rem-calc(9);
+        text-align: center;
+        @media #{$xmedium-up} {
+            text-align: left;
+        }
+    }
+
+    form {
+        padding: 0 rem-calc(9);
+        input {
+            background-color: $verylightblue;
+            color: #343434;
+            float: left;
+            font-size: rem-calc(14);
+            line-height: rem-calc(22);
+            margin: 0;
+            width: 49.5%;
+            padding: rem-calc(9) rem-calc(8) rem-calc(9);
+            height: auto;
+            &:hover, &:active, &:focus {
+                background-color: $verylightblue;
+            }
+            @media #{$xmedium-up} {
+                width: 46.5%;
+            }
+        }
+        button {
+            float: right;
+            font-size: rem-calc(16);
+            margin-top: 0;
+            width: 49.5%;
+            padding: rem-calc(8) rem-calc(14) rem-calc(9);
+            &:hover {
+                padding: rem-calc(8) rem-calc(14) rem-calc(9);
+            }
+            @media #{$small-up} {
+                font-size: rem-calc(18);
+            }
+            @media #{$medium-up} {
+                font-size: rem-calc(20);
+            }
+            @media #{$xmedium-up} {
+                font-size: rem-calc(18);
+                width: 52.5%;
+            }
+        }
+    }
+
+    .close-dropdown {
+        padding: rem-calc(3px) 0 rem-calc(12);
+        text-align: center;
+        svg {
+            fill:none;
+            stroke:#0071B9;
+            stroke-width:2;
+            stroke-linecap:round;
+            stroke-linejoin:round;
+            display: block;
+            margin: 0 auto;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        @media #{$xmedium-up} {
+            float: left;
+            width: 100%;
+        }
+    }
+}

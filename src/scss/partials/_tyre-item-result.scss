@@ -1,0 +1,280 @@
+.tyre-search-intro {
+  text-align: left;
+    .searched-for {
+      color: $blue;
+      font-weight: bold;
+      font-size: rem-calc(16);
+      line-height: rem-calc(20);
+    }
+    .recommended-size {
+      font-weight: normal;
+      font-size: rem-calc(16);
+      line-height: rem-calc(20);
+    }
+    .disclaimer {
+      font-size: rem-calc(14);
+      line-height: rem-calc(16);
+      color: $orange;
+      padding: rem-calc(12 18);
+      border: 1px solid $orange;
+      margin: rem-calc(20 0 24);
+      width: 100%;
+      @media #{$medium-up} {
+        padding: rem-calc(16 26);
+      }
+    }
+}
+.tyre-items-wrap {
+    display: block;
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .flexbox & {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+}
+.tyre-item {
+    border: 1px solid $blue;
+    margin-bottom: rem-calc(12);
+    text-align: left;
+    width: 100%;
+    @media #{$small-up} {
+        margin-bottom: rem-calc(21);
+    }
+    @media #{$large-up} {
+        float: left;
+        margin-right: 4%;
+        width: 48%;
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+    .tyre-header {
+        border-top: rem-calc(39) solid $blue;
+        border-bottom: 1px solid #d5d5d5;
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        .flexbox & {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+        }
+    }
+    .tyre-header-left {
+        float: left;
+        padding: rem-calc(6) rem-calc(14) rem-calc(8);
+        width: 60%;
+        .flexbox & {
+          float: none;
+          flex: 1 0 auto;
+        }
+        .tyre-title {
+            color: $blue;
+            font-size: rem-calc(18);
+            font-weight: 700;
+            line-height: rem-calc(22);
+            margin-top: 0;
+            margin-bottom: rem-calc(12);
+            padding: rem-calc(4) 0;
+            @media #{$medium-up} {
+                font-size: rem-calc(22);
+                line-height: rem-calc(28);
+            }
+            @media #{$large-up} {
+                font-size: rem-calc(18);
+                line-height: rem-calc(22);
+            }
+            a {
+                color: $blue;
+            }
+            + .tyre-size {
+              margin-top: rem-calc(-12);
+            }
+        }
+
+        .tyre-size {
+          color: #000;
+          font-size: rem-calc(13);
+          margin-top: 0;
+          margin-bottom: rem-calc(12);
+        }
+        .tyre-logo {
+            height: auto;
+            width: 87.5%;
+            max-width: 210px;
+            @media #{$large-up} {
+              width: 90%;
+            }
+        }
+        @media #{$small-up} {
+          width: 50%;
+        }
+        @media #{$medium-up} {
+            width: 50%;
+        }
+        @media #{$large-up} {
+            width: 50%;
+        }
+    }
+    .tyre-header-right {
+        float: left;
+        height: 0;
+        min-height: 120px;
+        padding-bottom: 40%;
+        position: relative;
+        width: 40%;
+        .flexbox & {
+          float: none;
+          flex: 1 0 auto;
+          height: auto;
+          padding-bottom: 0;
+        }
+        @media #{$small-up} {
+          padding-bottom: 50%;
+          width: 50%;
+        }
+        @media #{$medium-up} {
+            padding-bottom: 50%;
+            width: 50%;
+        }
+        @media #{$large-up} {
+            padding-bottom: 50%;
+            width: 50%;
+        }
+        .tyre-image {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom center;
+            position: absolute;
+            top: rem-calc(5);
+            left: rem-calc(5);
+            right: rem-calc(15);
+            bottom: 0;
+        }
+        .tyre-price {
+            background-color: $blue;
+            color: #ffffff;
+            display: inline-block;
+            font-size: rem-calc(18);
+            line-height: rem-calc(35);
+            padding: rem-calc(3) rem-calc(14) rem-calc(2);
+            font-weight: 700;
+            position: absolute;
+            top: rem-calc(-40);
+            right: -1px;
+            text-align: center;
+            &.catalogue-special {
+                background-color: $orange;
+                &:before {
+                    background-color: $orange;
+                    content: 'Catalogue Special';
+                    font-size: rem-calc(11);
+                    font-weight: 700;
+                    line-height: rem-calc(11);
+                    text-transform: uppercase;
+                    position: absolute;
+                    height: 100%;
+                    right: 100%;
+                    margin-right: 0;
+                    padding: rem-calc(9) 0 rem-calc(9) rem-calc(13);
+                    text-align: right;
+                    top: 0;
+                }
+                + .tyre-promotion {
+                  max-width: rem-calc(126);
+                  .csscalc & {
+                    max-width: calc(250% - #{rem-calc(184)});
+                    @media #{$small-up} {
+                      max-width: calc(200% - #{rem-calc(184)});
+                    }
+                  }
+                }
+            }
+
+        }
+        .tyre-promotion {
+          position: absolute;
+          top: rem-calc(-21);
+          left: -150%;
+          color: #fff;
+          font-weight: 700;
+          font-size: rem-calc(11);
+          line-height: rem-calc(11);
+          padding: rem-calc(8 8 8 14);
+          transform: translateY(-50%);
+          max-width: rem-calc(180);
+          @media #{$small-up} {
+            left: -100%;
+          }
+          .csscalc & {
+            max-width: calc(250% - #{rem-calc(102)});
+            @media #{$small-up} {
+              max-width: calc(200% - #{rem-calc(102)});
+            }
+          }
+        }
+    }
+    .tyre-content {
+        font-size: rem-calc(12);
+        line-height: rem-calc(16);
+        padding: rem-calc(12);
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        p {
+            font-size: rem-calc(12);
+            line-height: rem-calc(16);
+            min-height: rem-calc(48);
+            &:first-of-type {
+                margin-bottom: 0;
+            }
+            ~ p {
+                display: none;
+            }
+        }
+        a.read-more {
+          display: block;
+          float: left;
+          font-size: rem-calc(14);
+          line-height: rem-calc(18);
+          padding: rem-calc(6 0);
+          margin-top: rem-calc(20);
+        }
+
+        .btn-order {
+            float: right;
+            margin-top: rem-calc(20);
+            font-size: rem-calc(15);
+            line-height: rem-calc(20);
+            padding: rem-calc(5 13 5 37);
+            background-size: rem-calc(19);
+            background-position: rem-calc(10 7);
+        }
+
+        @media #{$medium-up} {
+            font-size: rem-calc(14);
+            line-height: rem-calc(18);
+            p {
+                font-size: rem-calc(14);
+                line-height: rem-calc(18);
+            }
+        }
+        @media #{$large-up} {
+            font-size: rem-calc(12);
+            line-height: rem-calc(16);
+            p {
+                font-size: rem-calc(12);
+                line-height: rem-calc(16);
+            }
+        }
+    }
+}

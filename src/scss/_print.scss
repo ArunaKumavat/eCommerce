@@ -1,0 +1,568 @@
+@media print {
+    *{
+        background-color: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        transition: none !important;
+    }
+    html {
+        font-size: rem-calc(12);
+    }
+
+    .page-heading-wrap h1 {
+      max-width: none;
+    }
+    body.body-scrolled {
+      padding-top: 0;
+    }
+    .page-header {
+        .header-top {
+            background-color: $blue !important;
+            -webkit-print-color-adjust:exact;
+        }
+        .logo {
+            float: left;
+            width: rem-calc(300);
+        }
+        .menu-toggle {
+            display: none;
+        }
+        .header-button {
+            display: none !important;
+        }
+        .phone-button {
+          display: none;
+        }
+        .ecommerce-menu {
+          display: none;
+        }
+        &.store-selected {
+          .header-button {
+            display: none;
+          }
+        }
+        &.scrolled {
+          .header-top  {
+            height: auto;
+            padding: rem-calc(10);
+            .row {
+              height: auto;
+            }
+          }
+          .logo {
+
+          }
+          .logo-small {
+            transform: none !important;
+            position: static;
+            display: none;
+            padding: 10px;
+            float: left;
+
+            img {
+              width: rem-calc(140);
+            }
+          }
+          .main-nav {
+            display: none !important;
+          }
+          .main-nav > ul {
+            max-width: none;
+            position: relative;
+            top: auto;
+            left: auto;
+            max-height: none;
+            display: none !important;
+
+          }
+        }
+        .phone-button {
+            float: right;
+            color: #ffffff !important;
+            font-size: rem-calc(20);
+            text-decoration: none;
+            margin-top: rem-calc(23);
+            padding-right: rem-calc(16);
+            width: auto;
+            &:after {
+                display: none;
+            }
+            span {
+                color: #ffffff !important;
+            }
+        }
+        .phone-number {
+            &:after {
+                display: none;
+            }
+        }
+        .header-store-details {
+          font-size: rem-calc(14);
+          line-height: rem-calc(16);
+            width: auto;
+            .store-location {
+                color: #ffffff !important;
+            }
+            a {
+                color: #ffffff !important;
+                text-decoration: none;
+            }
+        }
+    }
+    .page-header .header-store-details .store-location .change-store {
+        color: #ffffff !important;
+    }
+    .homepage-content article {
+        display: block;
+    }
+    .flexslider {
+        display: none !important;
+
+    }
+    .call-to-action-bar {
+      padding-top: rem-calc(32);
+
+    }
+    .news-preview-list-title {
+      page-break-inside: avoid;
+    }
+    .news-preview-list-title h5 {
+      padding-left: rem-calc(40);
+    }
+
+    .call-to-action-flexslider, .news-preview-list-flexslider, .hero-banner-flexslider {
+      display: block !important;
+      .slides {
+        transform: translate3d(0px, 0px, 0px) !important;
+        width: 100% !important;
+        > li {
+          width: 48% !important;
+          margin-right: 4% !important;
+          margin-bottom: 4% !important;
+          &:nth-child(2n+1) {
+            margin-right: 0 !important;
+          }
+          &.clone {
+            display: none !important;
+          }
+        }
+      }
+      .flex-title {
+        + .flex-caption {
+          text-align: center !important;
+          padding-top: 0 !important;
+        }
+      }
+      .flex-caption {
+        padding-top: rem-calc(16) !important;
+        text-align: left !important;
+      }
+      .flex-direction-nav {
+        display: none !important;
+      }
+    }
+    .hero-banner-flexslider {
+      .slides {
+        > li {
+          display: none !important;
+          width: 100% !important;
+          margin-right: 0% !important;
+          margin-bottom: 0% !important;
+          &.flex-active-slide {
+            display: block !important;
+          }
+        }
+      }
+      .flex-control-nav {
+        display: none !important;
+      }
+      .flex-caption {
+        padding: rem-calc(20) !important;
+        text-align: center !important;
+        .flex-link {
+          display: none !important;
+        }
+      }
+    }
+    .tyre-search-widget {
+        display: none;
+        .vehicle-make-list & {
+          display: none;
+        }
+    }
+    .vehicle-make-list .logo-matrix {
+      display: block;
+    }
+    .call-to-action-bar {
+        .call-to-action-container {
+            + .columns {
+                max-width: rem-calc(430);
+                margin: 0 auto;
+                float: none;
+                display: none;
+            }
+        }
+    }
+    .quick-find-menu {
+        > strong {
+            text-align: left;
+            span {
+                background-image: url("..//img/ampersand.svg") !important;
+                background-position: 50% 50% !important;
+                background-repeat: no-repeat !important;
+                background-size: 0.875rem 1.875rem !important;
+            }
+        }
+        .quick-find-links a {
+            padding-left: 0;
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .page-footer .footer-social {
+        display: none;
+    }
+    .sidebar {
+        display: none;
+    }
+    .content article p, .content .intro-content p {
+        font-size: rem-calc(16);
+        line-height: rem-calc(20);
+    }
+    .content .main-content {
+        max-width: none;
+    }
+    .sub-pages-list {
+      display: none;
+    }
+
+    body[class*='page'] {
+      .sub-pages-list {
+        display: block;
+        li {
+          width: 48%;
+          float: left;
+          margin-right: 4%;
+          border-bottom: 0;
+          margin-bottom: 2%;
+          margin-top: 2%;
+          clear: left;
+          &:first-child {
+            border-top: 0;
+          }
+          &:nth-child(2n) {
+            margin-right: 0;
+            clear: none;
+          }
+          .item-content {
+            display: block;
+          }
+          h5 {
+            a {
+              padding-left: 0;
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .find-store-content .map-wrap #map_wrapper {
+      height: rem-calc(600);
+      position: static;
+    }
+    .find-store-content .map-wrap {
+      page-break-inside: avoid;
+      display: block;
+    }
+    .find-store-content .location-items {
+      padding-top: rem-calc(20);
+    }
+    .find-store-content .location-items .distance:empty+.title {
+      padding-left: 0;
+    }
+    .find-store-content .location-items li {
+        page-break-inside: avoid;
+        padding-left: rem-calc(15);
+        padding-right: rem-calc(15);
+        &:hover {
+          padding-left: rem-calc(15);
+          padding-right: rem-calc(15);
+        }
+    }
+    .find-store-content .location-items .additional-info {
+        display: block !important;
+    }
+    .find-store-content .location-items .distance {
+        padding-left: 0;
+        &:before {
+            content: 'Distance: ';
+            position: static;
+            margin-right: rem-calc(6);
+            background: none;
+        }
+        &:after {
+          display: none;
+        }
+    }
+    .find-store-content .location-items .distance:empty {
+      &:before {
+        display: none;
+      }
+    }
+    .find-store-content .location-items a {
+        text-decoration: none;
+        &:before {
+            content: 'Phone: ';
+        }
+        &:after {
+            display: none;
+        }
+    }
+    .find-store-content .location-items .additional-info .title {
+        display: none;
+    }
+    .content .main-content form,
+    article blockquote, .intro-content blockquote,
+    article .table-wrap table, .intro-content .table-wrap table {
+        page-break-inside: avoid;
+    }
+    article ul li:before, .intro-content ul li:before {
+        -webkit-print-color-adjust:exact;
+    }
+
+    .sub-section-list,
+    .tyre-change,
+    .content .request-a-quote {
+        display: none;
+    }
+    .content.tyre-details .sub-section-list {
+      display: block;
+    }
+    .content.tyre-details .sub-section-list .item-content {
+      display: block;
+    }
+    .content.tyre-details .sub-section-list h5 {
+      &:before {
+        display: none;
+      }
+    }
+    .content.tyre-details .sub-section-list .sub-section-list h5 {
+      &:before {
+        display: none;
+      }
+    }
+    .content.store-page .sub-section-list h5 {
+      color: $orange !important;
+      font-size: rem-calc(18);
+      padding-left: 0;
+
+    }
+    .content.store-page article h5 {
+      color: $orange !important;
+    }
+    .content.tyre-details h1,
+    .content.tyre-results h1 {
+        margin-bottom: rem-calc(16);
+    }
+    .content.tyre-details .tyre-highlight {
+        max-width: rem-calc(600);
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .tyre-highlight .tyre-info p:first-of-type {
+        margin-bottom: rem-calc(20);
+    }
+    .tyre-highlight .tyre-info p:first-of-type ~ p {
+        display: block !important;
+    }
+    .tyre-highlight .tyre-info .read-more,
+    .content.tyre-results .show-all {
+        display: none;
+    }
+    .tyre-highlight .tyre-left {
+        width: 40%;
+        .tyre-price {
+          color: #ffffff !important;
+          &.catalogue-special {
+            background-color: $orange !important;
+          }
+        }
+        .tyre-promotion {
+          color: #ffffff !important;
+        }
+    }
+    .tyre-highlight .tyre-right {
+      .tyre-title {
+        color: $blue !important;
+        font-size: rem-calc(24);
+        line-height: rem-calc(28);
+      }
+      .btn-order {
+        background-color: $blue !important;
+        color: #fff !important;
+        box-shadow: 0px rem-calc(3px) $bluehover !important;
+        -webkit-print-color-adjust:exact;
+        padding-top: rem-calc(9);
+        float: right;
+        margin-right: 10px;
+      }
+    }
+    .tyre-item {
+        page-break-inside: avoid;
+        width: 48.5%;
+        margin-right: 3%;
+        margin-bottom: 3%;
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        .tyre-content {
+          .btn-order {
+            background-color: $blue !important;
+            color: #fff !important;
+            box-shadow: 0px rem-calc(3px) $bluehover !important;
+            -webkit-print-color-adjust:exact;
+          }
+        }
+    }
+    .tyre-items-wrap {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .tyre-item .tyre-header-left {
+        width: 70%;
+    }
+    .tyre-item .tyre-header-right {
+        padding-bottom: 0;
+        width: 30%;
+    }
+    .tyre-item .tyre-header-right .tyre-price {
+      background-color: $blue !important;
+      color: #fff !important;
+      -webkit-print-color-adjust:exact;
+    }
+    .tyre-item .tyre-header-right .tyre-price.catalogue-special {
+      background-color: $orange !important;
+      -webkit-print-color-adjust:exact;
+      color: #fff !important;
+    }
+    .tyre-item .tyre-header-right .tyre-price.catalogue-special:before {
+        padding-right: rem-calc(10);
+        color: #ffffff;
+        -webkit-print-color-adjust:exact;
+    }
+    .tyre-item .tyre-header-right .tyre-promotion {
+      left: -233%;
+      color: #fff !important;
+      max-width: calc(330% - 11.5rem);
+      -webkit-print-color-adjust:exact;
+    }
+    .tyre-item .tyre-header-left .tyre-title a {
+        text-decoration: none;
+    }
+    .tyre-item .tyre-content a {
+        display: none;
+    }
+    .vehicle-make-page .logo-image {
+        display: none;
+    }
+    .vehicle-make-page h1 {
+        margin-bottom: rem-calc(10);
+    }
+    .vehicle-make-page .main-content ul li {
+        width: 50%;
+        float: left;
+    }
+    .vehicle-make-page .main-content ul {
+        page-break-inside: avoid;
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+    .content {
+      h1 {
+        max-width: none;
+      }
+      .main-content {
+        form {
+          .tooltip {
+            display: none;
+          }
+          select {
+                background-image: url("..//img/arrow-down.svg") !important;
+                -webkit-print-color-adjust:exact;
+          }
+          input {
+            &[type=checkbox] {
+              -webkit-print-color-adjust:exact;
+              width: rem-calc(13);
+              height: rem-calc(13);
+              background-color: $verylightblue !important;
+              color: #7eb2d3 !important;
+              border: 2px solid $verylightblue !important;
+              outline: 1px solid #b7cad5;
+              box-shadow: none !important;
+              &:checked {
+                background-color: $blue !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content .main-content .article-wrap > article {
+
+        .sub-section-list {
+            display: block;
+            h5 {
+              &:before {
+                display: none;
+              }
+            }
+            .item-content {
+                display: block !important;
+            }
+            li {
+                page-break-inside: avoid;
+            }
+        }
+    }
+    .store-page-nav {
+        display: none;
+    }
+
+    @supports (-webkit-print-color-adjust:exact)  {
+        .vehicle-make-page .logo-image {
+            display: block;
+            float: left;
+            width: rem-calc(200);
+            margin-right: rem-calc(20px);
+            margin-bottom: rem-calc(16px);
+            padding-bottom: rem-calc(140px);
+            > div {
+                -webkit-print-color-adjust:exact;
+            }
+        }
+        .vehicle-make-page .intro-content {
+            &:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+        }
+        .tick-list.tick-list.tick-list li:after {
+            -webkit-print-color-adjust:exact;
+        }
+    }
+
+}
+@page {
+margin: 1cm 1.5cm;
+}

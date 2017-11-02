@@ -1,0 +1,193 @@
+.flexslider {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  .slides {
+        margin: 0;
+        padding: 0;
+        zoom: 1;
+    > li {
+        display: none;
+        backface-visibility: hidden;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+    .flex-caption {
+        float: left;
+        padding: rem-calc(4 10);
+        text-align: center;
+        width: 100%;
+        h4 {
+            color: $blue;
+            font-weight: 600;
+            font-size: rem-calc(30px);
+            margin-top: 0;
+            margin-bottom: rem-calc(4);
+            line-height: rem-calc(36px);
+        }
+        span {
+            color: $darkgrey;
+            font-weight: 300;
+            font-size: rem-calc(22px);
+            line-height: rem-calc(23px);
+            max-width: rem-calc(240);
+            display: inline-block;
+        }
+        .flex-link {
+            background-color: $orange;
+            position: absolute;
+            top: 17.5%;
+            right: 10px;
+            text-indent: -9999px;
+            width: rem-calc(40px);
+            height: rem-calc(38px);
+            backface-visibility: hidden;
+            transition: all 250ms ease-out;
+            .cssvwunit & {
+                top: calc(24.637681159vw - #{rem-calc(52px)});
+            }
+            &:hover {
+                transform: scale(1.15) rotate(-7.5deg);
+            }
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: rem-calc(11px);
+                height: rem-calc(21px);
+                margin-top: rem-calc(-11px);
+                margin-left: rem-calc(-4px);
+                backface-visibility: hidden;
+                polyline {
+                    stroke: #FFFFFF;
+                    fill: none;
+                    stroke-width: 2;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+            }
+        }
+    }
+
+
+    //
+    // Clearfix for the .slides element
+    //
+    &:after{
+        content: "\0020";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+    html[xmlns] &{
+        display: block;
+    }
+    * html & {
+        height: 1%;
+    }
+
+
+     //
+     // No JavaScript Fallback
+     //
+    .no-js &{
+      > li{
+        &:first-child{
+          display: block;
+        }
+      }
+    }
+  }
+
+  .flex-control-nav {
+      background-color: $lightgrey;
+      display: inline-block;
+      margin: .6rem 0 1rem;
+      list-style: none;
+      padding: rem-calc(12) rem-calc(14);
+      li {
+          float: left;
+          margin-right: rem-calc(11);
+          &:last-child {
+              margin-right: 0;
+          }
+          a {
+              background-color: $lightgreyhover;
+              display: block;
+              text-indent: -9999px;
+              width: rem-calc(8);
+              height: rem-calc(8);
+              transition: all 250ms ease-out;
+              &.flex-active, &:hover, &:active, &:focus {
+                  background-color: $blue;
+              }
+          }
+      }
+  }
+
+  .flex-direction-nav {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      .flex-nav-prev {
+          background-color: $orange;
+          position: absolute;
+          top: 17.5%;
+          left: rem-calc(10px);
+          text-indent: -9999px;
+          width: rem-calc(40px);
+          height: rem-calc(38px);
+          .cssvwunit & {
+              top: calc(24.637681159vw - #{rem-calc(52px)});
+          }
+          > a {
+              svg {
+                  margin-left: rem-calc(-6px);
+                  margin-top: rem-calc(-11px);
+              }
+          }
+      }
+      .flex-nav-next {
+          background-color: $orange;
+          position: absolute;
+          top: 17.5%;
+          right: 10px;
+          text-indent: -9999px;
+          width: rem-calc(40px);
+          height: rem-calc(38px);
+          .cssvwunit & {
+              top: calc(24.637681159vw - #{rem-calc(52px)});
+          }
+      }
+      li {
+          > a {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              svg {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  width: rem-calc(11px);
+                  height: rem-calc(21px);
+                  margin-top: rem-calc(-11px);
+                  margin-left: rem-calc(-4px);
+                  polyline {
+                      stroke: #FFFFFF;
+                      fill: none;
+                      stroke-width: 2;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                  }
+              }
+          }
+      }
+  }
+}

@@ -1,0 +1,39 @@
+<div class="page">
+   <div class="modal-title-container">
+      <h1>Do you want a <% if(ServiceDetails) { %><%= ServiceDetails.ProductName %> <% } %>?</h1>
+   </div>
+
+      <div class="row video-wrapper">
+         <div class="medium-8 column">
+            <% if(ServiceDetails) { %>
+            <% if(ServiceDetails.VideoUrl) { %>
+                <iframe src="<%= ServiceDetails.VideoUrl %>" height="270" width="100%" frameborder="0" allowfullscreen></iframe>
+            <% } else { %>
+               <p>
+                  <img src="<% if(ServiceDetails) { %><%= ServiceDetails.ImgUrl %><% } %>" >
+               </p>
+            <% } %>
+            <% } %>
+
+         </div>
+         <div class="medium-4 column">
+            <p>
+               <% if(ServiceDetails) { %><%= ServiceDetails.ProductDescription %><% } %>
+            </p>
+         </div>
+      </div>
+      <div class="row">
+         <h4 class="wheelservice-price">
+            <% if(ServiceDetails) { %>$ <%= ServiceDetails.DisplayListedPriceIncGst%><% } %>
+         </h4>
+      </div>
+      <div class="row">
+         <button id="btnAddToCart" name="submit" value="Add" class="btn deepblue blue-cart right">
+            <img src="/img/cart-icon-large.png"> Add to Cart
+         </button>
+      </div>
+
+</div>
+<div class="modal-footer">
+   <button class="btn cart-close">No Thanks</button>
+</div>

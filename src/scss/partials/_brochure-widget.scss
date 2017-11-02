@@ -1,0 +1,12 @@
+.brochure-widget {
+    background-image: url('..//img/pdf-icon.png'), url('..//img/arrow-right-white.svg');
+    background-repeat: no-repeat;
+    background-position: rem-calc(11) rem-calc(5), top rem-calc(9) right rem-calc(15);
+    background-size: rem-calc(24) rem-calc(31), rem-calc(11) rem-calc(21);
+    font-weight: 600;
+    margin: 5% 0 4%;
+    padding: rem-calc(9) rem-calc(40) rem-calc(8) rem-calc(49);
+    &:hover, &:active {
+        padding: rem-calc(9) rem-calc(40) rem-calc(8) rem-calc(49);
+    }
+}

@@ -1,0 +1,75 @@
+<section class="find-tyres-menu-bar">
+    <div class="row">
+        <div class="find-by-vehicle-section">
+            <h5>Find Tyres by Vehicle</h5>
+            @@include('./_logo-matrix.tpl.html')
+            <a href="#">Show all vehicle makes</a>
+            <form class="tyre-search-vehicles-form">
+                <label>
+                    Vehicle Make
+                    <select name="vehicle-make" id="vehicle-make">
+                        <option disabled="" selected="">Select make</option>
+                        <option value="23">Holden</option>
+                        <option value="54">Subaru</option>
+                        <option value="56">Toyota</option>
+                    </select>
+                </label>
+                <label>
+                    Vehicle Model
+                    <select name="vehicle-model" id="vehicle-model" disabled="">
+                        <option disabled="" selected="">Select model</option>
+                    </select>
+                </label>
+                <label>
+                    Vehicle Year
+                    <select name="vehicle-year" id="vehicle-year" disabled="">
+                        <option disabled="" selected="">Select year</option>
+                    </select>
+                </label>
+                <label>
+                    Vehicle Series
+                    <select name="vehicle-series" id="vehicle-series" disabled="">
+                        <option disabled="" selected="">Select series</option>
+                    </select>
+                </label>
+
+                <button class="btn orange">Search for tyres</button>
+                <span class="close-expansion"></span>
+            </form>
+        </div>
+        <div class="find-by-size-section">
+            <h5>Find Tyres by Size</h5>
+            <form class="tyre-search-size-form">
+                <label>
+                    Section Width<div class="tooltip"><div class="tooltip-message">This is the width of your tyre subsection.</div></div>
+                    <select>
+                        <option>205</option>
+                        <option>220</option>
+                        <option>240</option>
+                    </select>
+                </label>
+                <label>
+                    Aspect Ratio
+                    <select>
+                        <option>205</option>
+                        <option>220</option>
+                        <option>240</option>
+                    </select>
+                </label>
+                <label>
+                    Rim Diameter
+                    <select>
+                        <option>205</option>
+                        <option>220</option>
+                        <option>240</option>
+                    </select>
+                </label>
+
+                <button class="btn orange">Search for tyres</button>
+            </form>
+        </div>
+        <div class="close-dropdown">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.74px" height="11.37px" viewBox="0 0 20.74 11.37" style="enable-background:new 0 0 20.74 11.37;" xml:space="preserve"><polyline class="st0" points="19.74,10.37 10.37,1 1,10.37 "/></svg>
+        </div>
+    </div>
+</section>

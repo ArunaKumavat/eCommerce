@@ -1,0 +1,42 @@
+
+<div class="cart-table-cell full-width">
+    <span class="tyre-name">
+        <% if(ProductName) { %><%= ProductName %><% }%>
+    </span></br>
+    <span class="tyre-model-number">
+        <% if(ProductSku) { %><%= ProductSku %><% }%>
+    </span></br>
+    <img class="tyre-logo" src="/img/yokohama.svg" />
+</div>
+<div class="cart-table-cell wheel-image"><div class="tyre-image"><img src="/img/tyre-front-quarter.png"></div></div>
+<% if(Promotions) { %>
+<div class="cart-table-cell hide-mobile">
+    <% _.each(Promotions, function(promo) { %>
+    <span class="deal-name"><%= promo.PromoTitle %></span>
+    <% }); %>
+</div>
+<% } %>
+<div class="cart-table-cell">
+    <span class="mobile-table-header">Availability</span>
+    <span class="in-stock <% if(StockAvailabilityDetails === 'Out of stock') { %> red <% }%>"><%= StockAvailabilityDetails %></span>
+</div>
+<div class="cart-table-cell"><span class="mobile-table-header">Price</span><span class="tyre-price">
+    <% if(ListedPriceIncludingGst) { %>
+    $ <%= ListedPriceIncludingGst %>
+    <% } %>
+</span></div>
+<div class="quantity cart-table-cell">
+    <span class="mobile-table-header">Quantity</span>
+    <p class="quantity-input">
+        <span class="quantity-input-decrease">-</span>
+        <span class="quantity-input-value">
+            <% if(QuantityOrdered) { %><%= QuantityOrdered %><% } %>
+        </span>
+        <span class="quantity-input-increase">+</span></p>
+    <p class="quantity-update">Update</p>
+</div>
+<div class="cart-table-cell full-width">
+    <button id="btnAddToCart" name="submit" value="Add" class="btn deepblue blue-cart">
+        <img src="/img/cart-icon-large.png"> Add to Cart
+    </button>
+</div>

@@ -1,0 +1,281 @@
+
+
+
+// ## general classes.
+.ir {
+  // image replacement.
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -100em;
+}
+
+// text alignment, shortcuts for .text-left etc.
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+.tc {
+  text-align: center;
+}
+
+button {
+    border-radius: rem-calc(2px);
+}
+
+a p, body {
+  color: #343434;
+}
+
+img {
+    &.alignleft {
+        display: block;
+        margin: rem-calc(20) auto;
+        @media #{$medium-up} {
+            float: left;
+            margin: rem-calc(20) rem-calc(20) rem-calc(20) 0;
+            max-width: 50%;
+        }
+    }
+    &.alignright {
+        display: block;
+        margin: rem-calc(20) auto;
+        @media #{$medium-up} {
+            float: right;
+            margin: rem-calc(20) 0 rem-calc(20) rem-calc(20);
+            max-width: 50%;
+        }
+    }
+}
+
+table {
+  width: 100%;
+  tr:nth-of-type(even) {
+      background: #ffffff;
+  }
+  tr:nth-of-type(odd) {
+      background: #f1f1f1;
+  }
+}
+
+#skip a {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: rem-calc(14);
+
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+}
+
+// buttons.
+.btn {
+  background-color: $orange;
+  color: #ffffff;
+  display: inline-block;
+  line-height: rem-calc(22);
+  vertical-align: top;
+  width: auto;
+  margin-bottom: rem-calc(3px);
+  margin-top: rem-calc(10);
+  outline: none;
+  padding: rem-calc(7) rem-calc(14);
+  border-radius: rem-calc(2);
+  box-shadow: 0px rem-calc(3px) $orangehover;
+  text-align: center;
+  transition: all 250ms ease-out;
+  &:hover, &:active {
+    @media #{$xmedium-up} {
+      color: #ffffff;
+      cursor: pointer;
+      padding: rem-calc(7px) rem-calc(14px);
+      transform: translateY(rem-calc(3px));
+      box-shadow: none;
+      outline: none;
+    }
+
+  }
+  &.orange {
+      background-color: $orange;
+      box-shadow: 0px rem-calc(3px) $orangehover;
+      &:hover, &:active {
+        @media #{$xmedium-up} {
+          box-shadow: none;
+        }
+      }
+      &[disabled] {
+          box-shadow: none;
+
+          transform: translateY(rem-calc(3px));
+          cursor: default;
+          .no-cssfilters & {
+            background-color: #bbb;
+          }
+          .cssfilters & {
+            filter: brightness(0.5);
+          }
+      }
+  }
+  &.blue {
+      background-color: $lightblue;
+      box-shadow: 0px rem-calc(3px) $lightbluehover;
+      &:hover, &:active {
+        @media #{$xmedium-up} {
+          box-shadow: none;
+        }
+      }
+  }
+  &.deepblue {
+    background-color: $blue;
+    box-shadow: 0px rem-calc(3px) $bluehover;
+    &:hover, &:active {
+      @media #{$xmedium-up} {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.white {
+      background-color: #ffffff;
+      color: $blue;
+      box-shadow: 0px rem-calc(3px) #cce3f1;
+      border: 1px solid #cce3f1;
+      &:hover, &:active {
+        @media #{$xmedium-up} {
+          box-shadow: none;
+        }
+      }
+  }
+  &.close-button {
+      background-color: transparent;
+      border: 1px solid $lightblue;
+      box-shadow: 0px rem-calc(2px) $lightblue;
+      position: relative;
+      &:before {
+          content: '';
+          border-top: rem-calc(8) solid $lightblue;
+          border-left: rem-calc(8) solid transparent;
+          border-right: rem-calc(8) solid transparent;
+          position: absolute;
+          outline: none;
+          bottom: 0;
+          left: 50%;
+          margin-left: rem-calc(-8);
+          margin-bottom: rem-calc(-11);
+          transition: all 350ms ease-out;
+      }
+      &:hover, &:active {
+        @media #{$xmedium-up} {
+          outline: none;
+          &:before {
+              margin-bottom: -9px;
+              outline: none;
+              transition: all 0ms ease-out;
+          }
+        }
+      }
+  }
+  &.btn-order {
+    background-image: url('..//img/shopping_cart_icon.svg');
+    background-size: rem-calc(22);
+    background-repeat: no-repeat;
+    background-position: rem-calc(12 9);
+    padding-left: rem-calc(44);
+  }
+}
+
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $verylightblue;
+    background-image: url('..//img/arrow-down.svg');
+    background-size: rem-calc(16) rem-calc(9);
+    background-position: top rem-calc(14) right rem-calc(8);
+    border: 1px solid $blue;
+    border-radius: rem-calc(2);
+    color: $blue;
+    line-height: rem-calc(17);
+    margin-top: rem-calc(4);
+    transition: none 250ms ease-out;
+    padding-right: rem-calc(28);
+    &:hover {
+        background-color: $verylightbluehover;
+        border-color: $blue;
+        cursor: pointer;
+    }
+}
+
+
+form input,
+form select,
+form textarea {
+  margin: 0 0 1rem;
+}
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=date],
+textarea {
+    border-color: #5b9dc7;
+    border-radius: rem-calc(2);
+    font-size: rem-calc(14);
+    color: $blue;
+    line-height: rem-calc(19);
+    height: auto;
+    margin-top: rem-calc(3);
+    width: 100%;
+    &::placeholder {
+        color: $blue;
+    }
+    &:focus, &:active {
+        border-color: $blue;
+        outline-color: $blue;
+        box-shadow: 0px 0px 5px $blue;
+    }
+
+}
+input {
+    &[type=checkbox] {
+        appearance: none;
+        background-color: $verylightblue;
+        box-shadow: 0px 0px 0px rem-calc(2) $verylightblue, 0px 0px 0px rem-calc(3) #b7cad5;
+        border-radius: rem-calc(2);
+        display: inline-block;
+        vertical-align: middle;
+        width: rem-calc(12);
+        height: rem-calc(12);
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: rem-calc(8);
+        margin-left: rem-calc(12);
+        &:hover {
+            background-color: $verylightbluehover;
+            box-shadow: 0px 0px 0px rem-calc(2) $verylightbluehover, 0px 0px 0px rem-calc(3) #b7cad5;
+            cursor: pointer;
+        }
+        &:focus {
+            outline: none;
+        }
+        &:checked {
+            background-color: $blue;
+        }
+        + span {
+            display: inline;
+            vertical-align: middle;
+        }
+        @media #{$large-up} {
+            width: rem-calc(12);
+        }
+    }
+}

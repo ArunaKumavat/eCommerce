@@ -1,0 +1,235 @@
+.sub-section-list {
+    list-style: none;
+    margin: 0 0 rem-calc(12) 0;
+    padding: 0;
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .main-content article & {
+        margin-left: rem-calc(-15);
+        margin-right: rem-calc(-15);
+    }
+    @media #{$xmedium-up} {
+        padding-left: rem-calc(15);
+        padding-right: rem-calc(15);
+    }
+    .item-content {
+        display: none;
+        padding: rem-calc(12) rem-calc(40) rem-calc(20);
+        width: 100%;
+        p {
+            font-size: rem-calc(14);
+            line-height: rem-calc(16);
+            margin-bottom: rem-calc(16);
+            &:last-of-type {
+                margin-bottom: rem-calc(4);
+            }
+            @media #{$xmedium-up} {
+                font-size: rem-calc(16);
+            }
+        }
+        ul {
+            font-size: rem-calc(14);
+            line-height: rem-calc(16);
+            list-style: none;
+            padding: 0;
+            margin: 0 0 rem-calc(16) 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            li {
+                border: 0;
+                padding: rem-calc(5) 0 rem-calc(5) rem-calc(20);
+                position: relative;
+                &:before {
+                    display: block;
+                    background-color: $orange;
+                    content: '';
+                    height: 11px;
+                    width: 11px;
+                    position: absolute;
+                    top: rem-calc(7);
+                    left: 0;
+                    @media #{$xmedium-up} {
+                        top: rem-calc(8);
+                    }
+                }
+            }
+            @media #{$xmedium-up} {
+                font-size: rem-calc(16);
+                line-height: rem-calc(18);
+            }
+        }
+        > h5 {
+          width: 100%;
+          .csscalc & {
+            margin-left: rem-calc(-40);
+            width: calc(100% + #{rem-calc(80)});
+            @media #{$xmedium-up} {
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: rem-calc(26);
+            }
+          }
+        }
+        .table-wrap {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: rem-calc(20);
+            width: 100%;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .csscalc & {
+                margin-left: rem-calc(-40);
+                width: calc(100% + #{rem-calc(80)});
+                @media #{$xmedium-up} {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-bottom: rem-calc(26);
+                }
+            }
+            table {
+                width: 100%;
+                margin-bottom: 0;
+            }
+        }
+        table {
+            border: 0;
+            width: 100%;
+            caption {
+                color: $blue;
+                font-size: rem-calc(16);
+                font-weight: 700;
+                line-height: rem-calc(22);
+                margin: rem-calc(6) 0 rem-calc(14);
+                text-align: left;
+                padding: 0 rem-calc(15);
+                @media #{$xmedium-up} {
+                    font-size: rem-calc(18);
+                    line-height: rem-calc(24);
+                }
+                @media #{$large-up} {
+                    padding: 0;
+                }
+            }
+            tbody {
+
+            }
+            tr {
+                &:nth-child(odd) {
+                    background-color: $verylightblue;
+                }
+                &:nth-child(even) {
+                    background-color: #ffffff;
+                }
+
+            }
+            td {
+                color: $blue;
+                font-size: rem-calc(16);
+                min-width: rem-calc(130);
+                padding: rem-calc(6) rem-calc(15) rem-calc(5);
+                &:first-child {
+                    font-weight: 600;
+                }
+            }
+        }
+        img {
+            margin-bottom: rem-calc(14);
+            width: 100%;
+        }
+        &:before, &:after {
+            content: " ";
+            display: table;
+        }
+        &:after {
+            clear: both;
+        }
+        @media #{$xmedium-up} {
+            display: block !important;
+            padding: rem-calc(8) rem-calc(0);
+            p {
+                font-size: rem-calc(16);
+                line-height: rem-calc(22);
+            }
+        }
+    }
+    li {
+        border-bottom: 1px solid $grey;
+        padding: 0;
+        width: 100%;
+        &:before {
+            display: none;
+        }
+        &:first-child {
+            border-top: 1px solid $grey;
+        }
+        &.active {
+            h5 {
+                color: $orange;
+                &:before {
+                    background-color: $orange;
+                    transform: rotate(90deg);
+
+                }
+            }
+            @media #{$xmedium-up} {
+                h5 {
+                    color: $orange;
+                }
+            }
+        }
+        @media #{$xmedium-up} {
+            border: 0;
+            float: left;
+            &:first-child {
+                border: 0;
+            }
+            &:nth-child(2n) {
+                margin-right: 4%;
+            }
+        }
+    }
+    h5 {
+        margin: 0;
+        transition: all 250ms ease-out;
+        color: $lightblue;
+        font-size: rem-calc(14);
+        font-weight: 700;
+        display: block;
+        padding: rem-calc(9) rem-calc(16) rem-calc(9) rem-calc(36);
+        position: relative;
+        &:before {
+            content: '';
+            background-color: $lightblue;
+            background-image: url('..//img/arrow-right-white.svg');
+            background-position: rem-calc(8) rem-calc(4);
+            background-repeat: no-repeat;
+            background-size: rem-calc(6) rem-calc(12);
+            border-radius: rem-calc(10);
+            height: rem-calc(20);
+            width: rem-calc(20);
+            position: absolute;
+            top: rem-calc(8);
+            left: rem-calc(8);
+            transition: all 250ms ease-out;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        @media #{$xmedium-up} {
+            color: $orange;
+            font-size: rem-calc(18);
+            padding: rem-calc(14) rem-calc(0) rem-calc(7);
+            &:before {
+                display: none;
+            }
+            &:hover {
+                cursor: auto;
+            }
+        }
+    }
+}

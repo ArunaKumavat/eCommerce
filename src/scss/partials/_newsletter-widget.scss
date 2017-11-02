@@ -1,0 +1,56 @@
+.newsletter-widget {
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 1% 0;
+    font-size: rem-calc(14);
+    line-height: rem-calc(22);
+    .title {
+        color: $orange;
+        display: block;
+        font-weight: 600;
+        font-size: rem-calc(16);
+        line-height: rem-calc(22);
+    }
+    form {
+        position: relative;
+        input {
+            border-color: #5b9dc7;
+        }
+        button {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            font-size: rem-calc(14);
+
+            margin: 0;
+            text-transform: uppercase;
+            padding: rem-calc(4) rem-calc(18) rem-calc(4);
+            &:hover {
+                padding: rem-calc(4) rem-calc(18) rem-calc(4);
+            }
+        }
+    }
+    .input-error {
+        padding: 0 0 0 rem-calc(32);
+        color: $orange;
+        background-image: url('..//img/circle-cross.svg');
+        background-position: rem-calc(11) rem-calc(4);
+        background-size: rem-calc(14) rem-calc(14);
+        background-repeat: no-repeat;
+        font-size: rem-calc(12);
+        line-height: rem-calc(22);
+        padding-top: rem-calc(1);
+        margin-top: rem-calc(-8);
+        margin-bottom: rem-calc(2);
+        overflow: hidden;
+        transition: all 250ms ease-out;
+        &.field-validation-valid {
+          display: none;
+        }
+        &.field-validation-error {
+          display: block;
+        }
+    }
+
+}

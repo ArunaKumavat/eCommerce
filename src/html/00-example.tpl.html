@@ -1,0 +1,157 @@
+@@include('./partials/_head.tpl.html')
+      <main id="content">
+        <div class="row">
+          <article class="medium-12 columns">
+            <h1>H1 Pellentesque habitant morbi</h1>
+            <h2>H2 Aenean blandit, urna eget sagittis feugiat, ipsum</h2>
+            <h3>H3 Vivamus in bibendum erat</h3>
+            <h4>H4 Praesent tempus, mi ac suscipit</h4>
+            <h5>H5 Ut dapibus lectus sed nibh porta</h5>
+            <h6>H6 Nam et aliquam lectus, vel egestas nisi</h6>
+          </article>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+          <article class="medium-6 columns">
+            <h4>General copy</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam convallis viverra dui id consequat. Vivamus <strong>strong strong strong</strong> in bibendum erat, ut <em>emphasis emphasis emphasis</em> sodales mauris.</p>
+
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, block quote elit. Integer posuere erat a ante.</p>
+              <cite title="Source Title">Someone famous in &lt;cite&gt; tag</cite>
+            </blockquote>
+
+            <p>Ut dapibus lectus sed nibh porta, <a href="javascript:;">anchor anchor anchor</a> quis mollis enim accumsan. Quisque <abbr title="abbreviation">abbr</abbr> convallis odio eu felis ullamcorper, quis egestas enim commodo. Nunc placerat lectus in odio semper vulputate a ac diam. Nulla sagittis<sup>sup sup sup</sup> massa<sub>sub sub sub</sub> eget dui scelerisque. <small>small small small</small></p>
+
+            <h4>Definition lists</h4>
+            <h5>Default</h5>
+            <p>
+              <dl>
+                <dt>Description lists</dt>
+                <dd>A description list is perfect for defining terms.</dd>
+                <dt>Euismod</dt>
+                <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                <dt>Malesuada porta</dt>
+                <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+              </dl>
+            </p>
+
+            <h5>Horizontal list (<em>.dl-horizontal</em>)</h5>
+            <p>
+              <dl class="dl-horizontal">
+                <dt>Description lists</dt>
+                <dd>A description list is perfect for defining terms.</dd>
+                <dt>Euismod</dt>
+                <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                <dt>Malesuada porta</dt>
+                <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                <dt>Felis euismod semper eget lacinia</dt>
+                <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+              </dl>
+            </p>
+        
+            <h4>Lists</h4>
+            <p>
+              <ul>
+                <li>List item with a much longer description or more content.</li>
+                <li>List item</li>
+                <li>List item
+                  <ul>
+                    <li>Nested list item</li>
+                    <li>Nested list item</li>
+                      <ul>
+                        <li>Nested list item</li>
+                        <li>Nested list item</li>
+                      </ul>
+                  </ul>
+                </li>
+                <li>List item</li>
+              </ul>
+            </p>
+
+            <p>
+              <ol>
+                <li>List item with a much longer description or more content.</li>
+                <li>List item</li>
+                <li>List item
+                  <ol>
+                    <li>Nested list item</li>
+                    <li>Nested list item</li>
+                  </ol>
+                </li>
+                <li>List item</li>
+              </ol>
+            </p>
+
+            <h5>Tables</h5>
+            <table role="grid" summary="This table isn't very interesting, but you get the idea...">
+              <caption>This is a table caption. It also has a summary, designed to explain the table to a vision-impaired user.</caption>
+              <thead>
+                <tr>
+                  <th>Table Header</th>
+                  <th>Table Header</th>
+                  <th>Table Header</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Content Goes Here</td>
+                  <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                  <td>Content Goes Here</td>
+                </tr>
+                <tr>
+                  <td>Content Goes Here</td>
+                  <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                  <td>Content Goes Here</td>
+                </tr>
+                <tr>
+                  <td>Content Goes Here</td>
+                  <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                  <td>Content Goes Here</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </article>
+          <article class="medium-6 columns">
+            <h4>Form elements</h4>
+            <!-- because .net requires the all encompassing <form> we can trigger the angular form directive using the ng-form attribute -->
+            <section class="row" ng-form>
+              <fieldset>
+                <legend>Example form elements</legend>
+                <div class="column">
+                  <label>Enter your email address
+                    <input id="input-emaild-example" type="email" placeholder="Enter your email address" ng-minlength="6" required>
+                  </label>
+                </div>
+                <div class="column">
+                  <label>Enter a password
+                    <input id="input-pass-example" type="password" placeholder="Enter a password" required>
+                  </label>
+                </div>
+                <div class="column">
+                  <label>Some options to select from
+                    <select>
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                      <option>Option 4</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="column tr">
+                  <button class="btn btn-blue">Submit</button>
+                </div>
+                
+              </fieldset>
+              
+              <div class="column">
+                <p>Need a <a href="javascript:;" ng-click="exampleModal()">help modal</a>?</p>
+              </div>
+            </section>
+          </article>
+
+        </div>
+      </main>
+@@include('./partials/_foot.tpl.html')

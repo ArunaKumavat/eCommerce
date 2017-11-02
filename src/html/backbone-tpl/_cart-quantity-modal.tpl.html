@@ -1,0 +1,67 @@
+<div class="page">
+  <div class="modal-title-container row">
+    <div class="medium-6 columns">
+      <h1>Shopping cart</h1>
+    </div>
+    <div class="pagination columns">
+      <div class="row">
+        <div class="cart-page xsmall-4 columns active"><span>1.</span><span>Shopping cart</span></div>
+        <div class="cart-page xsmall-4 columns"><span>2.</span><span>Your Details</span></div>
+        <div class="cart-page xsmall-4 columns"><span>3.</span><span>Order Summary</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="confirm-quantity-container">
+    <div class="modal-header-alert">
+      <p>All prices includes fitting, balancing, tubeless valve, waste tyre management fee and GST.</p>
+    </div>
+
+    <% if(ErrorMessage) { %>
+    <div class="error">
+      <%= ErrorMessage %>
+    </div>
+    <% } %>
+
+    <div class="cart-table">
+      <div class="cart-table-head">
+        <div class="hide-mobile">Tyres</div>
+        <div></div>
+        <div class="hide-mobile"></div>
+        <div>Availability</div>
+        <div>Price</div>
+        <div>Quantity</div>
+        <div></div>
+        <div>Total</div>
+      </div>
+      <div class="table-body">
+        <div class="table-row">
+
+        </div>
+        <div class="service row">
+
+        </div>
+        <div class="promo-code row">
+          <div><p class="promo-text">Do you have a promo code?</p></div>
+          <div><input class="left promocode" type="text" placeholder="Enter ..."></div>
+          <div><button id="applyCode" class="btn apply right" value="">Apply</button></div>
+        </div>
+      </div>
+      <div class="total row">
+        <div class="medium-7 columns">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce urna tellus, pulvinar luctus erat sed, pharetra cursus nisl. Curabitur malesuada sem at est pretium, in aliquet risus commodo.</p>
+        </div>
+        <div class="medium-5 columns">
+          <div class="row"><p class="right retail-price">Retail Price: <span>$ <%= DisplayTotalRetailValueIncludingGst %></span></p></div>
+          <div class="row"><p class="right discount-price">Discount: <span>$ <%= DisplayTotalDiscountValueIncludingGst %></span></p></div>
+          <div class="row"><p class="right total-price">Total: <span>$ <%= DisplayTotalBillableValueIncludingGst %></span></p></div>
+          <div class="row"><p class="right">(Price Includes GST)</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button class="btn cart-close">Close</button>
+  <button class="btn orange">Your Details</button>
+</div>

@@ -1,0 +1,63 @@
+.quick-find-menu {
+    > strong {
+        font-weight: 600;
+        font-size: rem-calc(18);
+        color: $orange;
+        margin: 0 0 rem-calc(14) 0;
+        text-align: center;
+        display: block;
+        text-transform: uppercase;
+        @media #{$large-up} {
+            text-align: left;
+        }
+        span {
+            width: rem-calc(16);
+            height: rem-calc(30);
+            vertical-align: middle;
+            display: inline-block;
+            background-image:url('..//img/ampersand.svg');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: rem-calc(14) rem-calc(30);
+        }
+    }
+    .quick-find-links {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            margin-bottom: rem-calc(12);
+        }
+        a {
+            color: $blue;
+            background-color: #ffffff;
+            font-size: rem-calc(18);
+            line-height: rem-calc(22);
+            padding: rem-calc(9) 0 rem-calc(8) rem-calc(60);
+            display: block;
+            position: relative;
+            transition: all 250ms ease-out;
+            &:before {
+                content: '';
+                width: rem-calc(41);
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $blue;
+                background-image: url('..//img/arrow-right-white.svg');
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: rem-calc(11) rem-calc(20);
+                transition: all 250ms ease-out;
+            }
+            &:hover {
+                background-color: #f4f4f4;
+                &:before {
+                    width: rem-calc(45);
+                }
+            }
+        }
+    }
+
+}

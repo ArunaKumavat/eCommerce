@@ -1,0 +1,198 @@
+<div class="page">
+    <div class="modal-title-container row">
+        <div class="medium-6 columns">
+            <h1>Your Details</h1>
+        </div>
+        <div class="pagination columns">
+            <div class="row">
+                <div class="cart-page xsmall-4 columns"><span>1.</span><span>Shopping cart</span></div>
+                <div class="cart-page xsmall-4 columns active"><span>2.</span><span>Your Details</span></div>
+                <div class="cart-page xsmall-4 columns"><span>3.</span><span>Order Summary</span></div>
+            </div>
+        </div>
+    </div>
+    <% if(ExpiryCustomerDetail) { %>
+    <div class="error">
+        Your session has expired. Please re-enter your details.
+    </div>
+    <% } %>
+    <div class="details-container">
+        <form>
+            <% if (AdminUser) { %>
+            <div class="row">
+                <div class="medium-6 columns">
+                    <label>User name</label>
+                    <input id="uName" name="UserName" class="username" type="text" placeholder="User name">
+                </div>
+                <div class="medium-6 columns">
+                    <label>Password</label>
+                    <input id="password" name="Password" class="password" type="password">
+                </div>
+            </div>
+            <% } %>
+            <div class="row">
+                <div class="medium-6 columns">
+                    <label>First name</label>
+                    <input id="fName" name="Customer.FirstName" class="firstname" type="text" value="<%= Customer.FirstName %>" placeholder="First name">
+                </div>
+                <div class="medium-6 columns">
+                    <label>Last name</label>
+                    <input id="lName" name="Customer.LastName" class="lastname" type="text" value="<%= Customer.LastName %>" placeholder="Last name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="medium-6 columns">
+                    <label>Email address <span class="title-primary">(We will email your invoice)</span></label>
+                    <input id="email" name="Customer.EmailAddress" class="email"  value="<%= Customer.EmailAddress %>" type="email" placeholder="Email address">
+                </div>
+            </div>
+            <div class="row">
+                <div class="medium-6 columns">
+                    <label>Contact phone</label>
+                    <input id="phone" name="Customer.Phone" value="<%= Customer.Phone %>" type="number" placeholder="Contact phone">
+                </div>
+                <div class="medium-6 columns">
+                    <label>Alternate Contact phone</label>
+                    <input id="alt-phone" name="Customer.AltPhone" type="number" value="<%= Customer.AltPhone %>" placeholder="Alt Contact phone">
+                </div>
+            </div>
+            <div>
+                <h4>Billing address</h4>
+            </div>
+            <div class="row">
+                <div class="medium-6 columns">
+                    <label>Address</label>
+                    <input id="address" name="Customer.Address.StreetAddress1" type="text" value="<% if(Customer.Address){ %> <%= Customer.Address.StreetAddress1 %> <% } %>" placeholder="Address">
+                </div>
+                <div class="medium-6 columns">
+                    <label>City/Suburb/Town</label>
+                    <input id="city" name="Customer.Address.Suburb" type="text" value="<% if(Customer.Address){ %><%= Customer.Address.Suburb %><% } %>" placeholder="City/Suburb/Town">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="xsmall-6 medium-6 columns">
+                    <div class="row">
+                        <div class="medium-6 columns">
+                            <label value="<% if(Customer.Address){ %><%= Customer.Address.State %><% } %>">State</label>
+                            <select  id="state" >
+                                <option disabled selected value> -- select an option -- </option>
+
+                            <% if(Customer.Address){ %>
+                                <% if(Customer.Address.State === 'VIC') { %>
+                                <option selected value="VIC">VIC</option>
+                                <option value="SA">SA</option>
+                                <option value="WA">WA</option>
+                                <option value="QLD">QLD</option>
+                                <option value="NSW">NSW</option>
+                                <option value="ACT">ACT</option>
+                                <option value="NT">NT</option>
+                                <option value="TAS">TAS</option>
+                                <% } else if(Customer.Address.State === 'SA') { %>
+                                <option value="VIC">VIC</option>
+                                <option selected value="SA">SA</option>
+                                <option value="WA">WA</option>
+                                <option value="QLD">QLD</option>
+                                <option value="NSW">NSW</option>
+                                <option value="ACT">ACT</option>
+                                <option value="NT">NT</option>
+                                <option value="TAS">TAS</option>
+                                <% } else if(Customer.Address.State === 'WA') { %>
+                                <option value="VIC">VIC</option>
+                                <option value="SA">SA</option>
+                                <option selected value="WA">WA</option>
+                                <option value="QLD">QLD</option>
+                                <option value="NSW">NSW</option>
+                                <option value="ACT">ACT</option>
+                                <option value="NT">NT</option>
+                                <option value="TAS">TAS</option>
+                                <% } else if(Customer.Address.State === 'QLD') { %>
+                                <option value="VIC">VIC</option>
+                                <option value="SA">SA</option>
+                                <option value="WA">WA</option>
+                                <option selected value="QLD">QLD</option>
+                                <option value="NSW">NSW</option>
+                                <option value="ACT">ACT</option>
+                                <option value="NT">NT</option>
+                                <option value="TAS">TAS</option>
+                                <% } else if(Customer.Address.State === 'NSW') { %>
+                                <option value="VIC">VIC</option>
+                                <option value="SA">SA</option>
+                                <option value="WA">WA</option>
+                                <option value="QLD">QLD</option>
+                                <option selected value="NSW">NSW</option>
+                                <option value="ACT">ACT</option>
+                                <option value="NT">NT</option>
+                                <option value="TAS">TAS</option>
+                                <% }else if(Customer.Address.State === 'ACT') { %>
+                                <option value="VIC">VIC</option>
+                                <option value="SA">SA</option>
+                                <option value="WA">WA</option>
+                                <option value="QLD">QLD</option>
+                                <option value="NSW">NSW</option>
+                                <option selected value="ACT">ACT</option>
+                                <option value="NT">NT</option>
+                                <option value="TAS">TAS</option>
+                                <% } else if(Customer.Address.State === 'NT') { %>
+                                <option value="VIC">VIC</option>
+                                <option value="SA">SA</option>
+                                <option value="WA">WA</option>
+                                <option value="QLD">QLD</option>
+                                <option value="NSW">NSW</option>
+                                <option value="ACT">ACT</option>
+                                <option selected value="NT">NT</option>
+                                <option value="TAS">TAS</option>
+                                <% } else if(Customer.Address.State === 'TAS') { %>
+                                <option value="VIC">VIC</option>
+                                <option value="SA">SA</option>
+                                <option value="WA">WA</option>
+                                <option value="QLD">QLD</option>
+                                <option value="NSW">NSW</option>
+                                <option value="ACT">ACT</option>
+                                <option value="NT">NT</option>
+                                <option selected value="TAS">TAS</option>
+                                <% } else { %>
+                                <option value="VIC">VIC</option>
+                                <option value="SA">SA</option>
+                                <option value="WA">WA</option>
+                                <option value="QLD">QLD</option>
+                                <option value="NSW">NSW</option>
+                                <option value="ACT">ACT</option>
+                                <option value="NT">NT</option>
+                                <option value="TAS">TAS</option>
+                                <% } %>
+                            <% } else { %>
+                                <option value="VIC">VIC</option>
+                                <option value="SA">SA</option>
+                                <option value="WA">WA</option>
+                                <option value="QLD">QLD</option>
+                                <option value="NSW">NSW</option>
+                                <option value="ACT">ACT</option>
+                                <option value="NT">NT</option>
+                                <option value="TAS">TAS</option>
+                                <% } %>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="xsmall-6 medium-6 columns">
+                    <div class="row left">
+                    <label>Postcode</label>
+                    <input id="postcode" name="Customer.Address.PostCode" type="number" value="<% if(Customer.Address){ %><%= Customer.Address.PostCode %><% } %>" placeholder="Postcode">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Subscription options</h4>
+                <input type="checkbox" name="user-subscription" id="user-subscription" checked="checked">
+                Yes, please send me the lorem ipsum email newsletter.
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button class="btn cart-close">Close</button>
+    <button class="btn orange">Payments</button>
+</div>
